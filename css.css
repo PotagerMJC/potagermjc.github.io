@@ -12,11 +12,13 @@ h1{
 h2{
     color: rgb(255, 255, 255);
     font-family: 'matura';
-    font-size: 500%;
+    font-size: 150%;
 }
 @font-face {
     font-family: zelda;
     src: url('./The\ Wild\ Breath\ of\ Zelda.otf') format('opentype'); 
+}
+@font-face {
     font-family: 'matura';
     src: url('./MATURASC.TTF') format('truetype');
 }
