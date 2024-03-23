@@ -8,6 +8,14 @@ h1{
     font-family: zelda, sans-serif; 
     font-size: 500%;
 }
+h2{
+    color: rgb(255, 255, 255);
+    font-size: 400%;
+}
+h3{
+   color: rgb(255, 255, 255); 
+   font-size: 300%;
+}
 @font-face {
     font-family: zelda;
     src: url('./The\ Wild\ Breath\ of\ Zelda.otf') format('opentype'); 
