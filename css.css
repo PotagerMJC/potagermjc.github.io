@@ -9,8 +9,20 @@ h1{
     font-family: zelda, sans-serif; 
     font-size: 500%;
 }
+.text-with-border {
+    color: white; 
+    font-size: 85px; /* Taille de la police */
+    text-shadow: 
+        -2px -2px 0 black,  
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black; 
+    text-align: center;
+    font-family: zelda, sans-serif; 
+}
+
 h2{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: 'matura';
     font-size: 150%;
 }
@@ -22,3 +34,5 @@ h2{
     font-family: 'matura';
     src: url('./MATURASC.TTF') format('truetype');
 }
+
+
