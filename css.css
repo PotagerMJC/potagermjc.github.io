@@ -1,6 +1,7 @@
 body{
     background-color:rgb(68, 184, 139) ;
     font-family: zelda, sans-serif; 
+    font-family: 'matura', sans-serif;
 }
 h1{
     text-align: center;
@@ -8,7 +9,14 @@ h1{
     font-family: zelda, sans-serif; 
     font-size: 500%;
 }
+h2{
+    color: rgb(255, 255, 255);
+    font-family: 'matura';
+    font-size: 500%;
+}
 @font-face {
     font-family: zelda;
     src: url('./The\ Wild\ Breath\ of\ Zelda.otf') format('opentype'); 
+    font-family: 'matura';
+    src: url('./MATURASC.TTF') format('truetype');
 }
