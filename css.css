@@ -1,6 +1,6 @@
 body{
     background-color:rgb(68, 184, 139) ;
-    font-family: zelda, sans-serif; 
+    font-family: 'zelda', sans-serif; 
     font-family: 'matura', sans-serif;
 }
 h1{
@@ -23,8 +23,12 @@ h1{
 
 h2{
     color: rgb(0, 0, 0);
-    font-family: 'matura';
-    font-size: 150%;
+    font-family: 'zelda';
+    font-size: 200%;
+}
+h3{
+    font-size: 125%;
+    font-family: 'Courier New', sans-serif;
 }
 @font-face {
     font-family: zelda;
@@ -34,5 +38,29 @@ h2{
     font-family: 'matura';
     src: url('./MATURASC.TTF') format('truetype');
 }
+.sommaire {
+    margin-left: 50px; /* Vous pouvez ajuster cette valeur selon votre besoin */
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.image-right {
+    margin-left: auto; 
+    margin-right: 1000px;
+}
+@media only screen and (max-width: 600px) {
+    .image-right {
+        margin-right: 100px; /* Distance de la marge pour les appareils mobiles */
+    }
+}
+@media only screen and (max-width: 600px) {
+    .image-right {
+        width: 50px; /* Nouvelle largeur de l'image sur les appareils mobiles */
+        height: auto; /* Hauteur automatique pour conserver les proportions */
+    }
+}
+
 
 
