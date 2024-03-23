@@ -1,3 +1,14 @@
 body{
     background-color:rgb(68, 184, 139) ;
+    font-family: zelda, sans-serif; 
+}
+h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: zelda, sans-serif; 
+    font-size: 500%;
+}
+@font-face {
+    font-family: zelda;
+    src: url('./The\ Wild\ Breath\ of\ Zelda.otf') format('opentype'); 
 }
