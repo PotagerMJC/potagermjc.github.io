@@ -55,6 +55,10 @@ h3{
         margin-right: 100px; /* Distance de la marge pour les appareils mobiles */
     }
 }
+@media only screen and (max-width: 1000px) {
+    .image-richt {
+        margin-right: 500px;
+    }
 @media only screen and (max-width: 600px) {
     .image-right {
         width: 50px; /* Nouvelle largeur de l'image sur les appareils mobiles */
