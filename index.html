@@ -2,29 +2,68 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" id="viewport-meta">
     <link rel="stylesheet" href="css.css">
     <title>Carré Potager</title>
+    <script>
+        window.addEventListener('load', function() {
+            // Retirer l'attribut user-scalable=no après le chargement de la page
+            var viewportMeta = document.getElementById('viewport-meta');
+            viewportMeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0'; // Vous pouvez définir maximum-scale à la valeur que vous préférez
+        });
+    </script>
 </head>
 <body>
     <div class="text-with-border">Carre potager de la MJC Douai</div>
-    <p>Découvrez le Carré Potager de Zelda: Tears of the Kingdom, un jardin magique inspiré de l'univers légendaire de Zelda. Dans ce petit coin de nature enchanteée, vous trouverez une variété de plantes et de légumes évoquant les ressources essentielles de l'aventure.</p>
+    <p>Découvrez le Carré Potager de Zelda: Tears of the Kingdom, un jardin magique inspiré de l'univers légendaire de Zelda. Dans ce petit coin de nature enchantée, vous trouverez une variété de plantes et de légumes évoquant les ressources essentielles de l'aventure.</p>
     <h2>
         Sommaire :
     </h2>
-    <h3>
-        1) Présentation des plantes du carré potager
-    </h3>
+    <h3>1] Présentation des plantes du carré potager</h3>
     <div class="sommaire">
-        <div class="container"
-        <p> ↳ radis rond</p> 
-        <img src="./Carré potager 2024/radis_rond.png" width="5%" alt="radis rond" class="image-right">
+        <div class="container">
+            <p> ↳ radis rond</p> 
+            <img src="./Carré potager 2024/radis_rond.png" width="5%" alt="radis rond" class="image-right">
         </div>
-    </div>
-    <div class="sommaire">
         <div class="container">
             <p> ↳ tomate-cerise</p>
             <img src="./Carré potager 2024/tomate-cerise.jpg" alt="Image" class="image-right" width="5%">
+        </div>
+        <div class="container">
+            <p> ↳ ail rose</p>
+            <img src="./Carré potager 2024/ail_rose.png" alt="Image" class="image-right" width="5%">
+        </div>
+        <div class="container">
+            <p> ↳ aneth</p>
+            <img src="./Carré potager 2024/aneth.jpg" alt="Image" class="image-right" width="5%">
+        </div>
+        <div class="container">
+            <p> ↳ artichaut</p>
+            <img src="./Carré potager 2024/artichaut.png" alt="Image" class="image-right" width="5%">
+        </div>
+        <div class="container">
+            <p> ↳ bourache</p>
+            <img src="./Carré potager 2024/bourrache.jpg" alt="Image" class="image-right" width="5%">
+        </div>
+        <div class="container">
+            <p> ↳ carottes</p>
+            <img src="./Carré potager 2024/carottes.jpg" alt="Image" class="image-right" width="5%">
+        </div>
+        <div class="container">
+            <p> ↳ ciboulette chinoise</p>
+            <img src="./Carré potager 2024/ciboulette-chinoise.jpg" alt="Image" class="image-right" width="5%">
+        </div>
+        <div class="container">
+            <p> ↳ liveche</p>
+            <img src="./Carré potager 2024/liveche.jpg" alt="Image" class="image-right" width="5%">
+        </div>
+        <div class="container">
+            <p> ↳ physalis</p>
+            <img src="./Carré potager 2024/physalis.png" alt="Image" class="image-right" width="5%">
+        </div>
+        <div class="container">
+            <p> ↳ violette</p>
+            <img src="./Carré potager 2024/violette.jpg" alt="Image" class="image-right" width="5%">
         </div>
     </div>
 </body>
