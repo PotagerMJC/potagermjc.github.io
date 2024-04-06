@@ -11,14 +11,17 @@ h1{
 }
 .text-with-border {
     color: white; 
-    font-size: 85px; /* Taille de la police */
     text-shadow: 
         -2px -2px 0 black,  
          2px -2px 0 black,
         -2px  2px 0 black,
          2px  2px 0 black; 
-    text-align: center;
     font-family: zelda, sans-serif; 
+}
+
+.titre{
+    font-size: 85px;
+    text-align: center;
 }
 
 h2{
@@ -27,14 +30,9 @@ h2{
     font-size: 200%;
 }
 h3{
-    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 125%;
-    font-family: 'zelda';
-    text-shadow: 
-        -2px -2px 0 black,  
-         2px -2px 0 black,
-        -2px  2px 0 black,
-         2px  2px 0 black; 
 }
 @font-face {
     font-family: zelda;
@@ -46,14 +44,16 @@ h3{
 }
 .sommaire {
     margin-left: 2%; 
+    margin-bottom: 200px;
 }
 .container {
     display: flex;
+    font-size: 20px;
     align-items: center;
-    border: 2px solid rgb(223, 223, 223);
+    border: 2px dashed rgb(223, 223, 223);
     margin: 0.5%;
-    border-style: dashed;
 }
+
 
 .image-right {
     margin-left: auto; 
@@ -67,43 +67,20 @@ h3{
         height: auto; 
     }
 }
-#radis {
-    margin-top: 300px; 
+
+.plante{
+    font-size: 20px;
+    margin-top: 75px; 
 }
-#tomate-cerise {
-    margin-top: 150px;
-}
-#ail_rose {
-    margin-top: 150px;
-}
-#aneth {
-    margin-top: 150px;
-}
-#artichaut {
-    margin-top: 150px;
-}
-#bourache {
-    margin-top: 150px;
-}
-#carotte {
-    margin-top: 150px;
-}
-#ciboulette {
-    margin-top: 150px;
-}
-#liveche {
-    margin-top: 150px;
-}
-#physalis {
-    margin-top: 150px;
-}
-#violette {
-    margin-top: 150px;
-}
+
 .smooth-scroll {
     cursor: pointer;
     color: rgb(0, 0, 0);
     text-decoration: underline;
+}
+.sommaire a:hover{
+    color: yellow;
+
 }
 .smooth-scroll:hover {
     color: blue;
