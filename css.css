@@ -27,8 +27,14 @@ h2{
     font-size: 200%;
 }
 h3{
+    color: white;
     font-size: 125%;
-    font-family: 'Courier New', sans-serif;
+    font-family: 'zelda';
+    text-shadow: 
+        -2px -2px 0 black,  
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black; 
 }
 @font-face {
     font-family: zelda;
