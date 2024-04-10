@@ -36,11 +36,11 @@ h3{
 }
 @font-face {
     font-family: zelda;
-    src: url('./The\ Wild\ Breath\ of\ Zelda.otf') format('opentype'); 
+    src: url('./assets/typo/The\ Wild\ Breath\ of\ Zelda.otf') format('opentype'); 
 }
 @font-face {
     font-family: 'matura';
-    src: url('./MATURASC.TTF') format('truetype');
+    src: url('./assets/typo/MATURASC.TTF') format('truetype');
 }
 .sommaire {
     margin-left: 2%; 
