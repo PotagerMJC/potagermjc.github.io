@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" id="viewport-meta">
     <link rel="stylesheet" href="css.css">
-    <script src="js.js" defer></script> 
+    <script src="main.js" defer></script> 
     <title>Carré Potager</title>
     <script>
         window.addEventListener('load', function() {
@@ -20,106 +20,116 @@
     <p style="font-size: 150%; text-align: center;">Découvrez le Carré Potager de Zelda: Tears of the Kingdom, un jardin magique inspiré de l'univers légendaire de Zelda. Dans ce petit coin de nature enchantée, vous trouverez une variété de plantes et de légumes évoquant les ressources essentielles de l'aventure.</p>
     <h2 class="text-with-border">Sommaire :</h2>
     <div class="sommaire">
-        <a href="#radis" class="smooth-scroll">
-            <div class="container">
-                <p> ↳ Radis rond</p> 
-                <img src="assets/img/Carré potager 2024/radis_rond.png" width="5%" alt="radis rond" class="image-right">
+        <div>
+            <a href="#radis" class="smooth-scroll">
+                <div class="container">
+                    <p> ↳ radis rond</p> 
+                    <img src="assets/img/Carré potager 2024/radis_rond.png" width="5%" alt="radis rond" class="image-right">
+                </div>
+            </a>
+            <div class="plante" id="radis" style="display: none;">
+                <h3 class="text-with-border">1] le Radis Rond </h3>
+                <p>
+                    Le radis rond se consomme cru ou braisé. Il stimule système immunitaire et lutte contre le vieillissement cellulaire. Contient des vitamines B, stimule le système cardiovasculaire ( protection du coeur) et évite le développement de certains cancers. 
+                </p>
             </div>
-        </a>
-        <a href="#tomate-cerise" class="smooth-scroll">
-            <div class="container">
-                <p> ↳ Tomate-cerise</p>
-                <img src="assets/img/Carré potager 2024/tomate-cerise.jpg" alt="Image" class="image-right" width="5%">
+        </div>
+        <div>
+            <a href="#tomate-cerise" class="smooth-scroll">
+                <div class="container">
+                    <p> ↳ tomate-cerise</p>
+                    <img src="assets/img/Carré potager 2024/tomate-cerise.jpg" alt="Image" class="image-right" width="5%">
+                </div>
+            </a>
+            <div class="plante" id="tomate-cerise" style="display: none;">
+                <h3 class="text-with-border">2] la Tomate-cerise</h3>
+                <p>
+                    La tomate cerise est une plante anti-oxydante et anti-inflammatoire. Se consomme crut ou cuite.
+                </p>
             </div>
-        </a>
-        <a href="#ail_rose" class="smooth-scroll">
-            <div class="container">
-                <p> ↳ Ail rose de Lautrec</p>
-                <img src="assets/img/Carré potager 2024/ail_rose.png" alt="Image" class="image-right" width="5%">
-            </div>
-        </a>
+        </div>
+            <a href="#ail_rose" class="smooth-scroll">
+                <div class="container">
+                    <p> ↳ ail rose</p>
+                    <img src="assets/img/Carré potager 2024/ail_rose.png" alt="Image" class="image-right" width="5%">
+                </div>
+            </a>
         <a href="#aneth" class="smooth-scroll">
             <div class="container">
-                <p> ↳ Aneth</p>
+                <p> ↳ aneth</p>
                 <img src="assets/img/Carré potager 2024/aneth.jpg" alt="Image" class="image-right" width="5%">
             </div>
         </a>
         <a href="#artichaut" class="smooth-scroll">
             <div class="container">
-                <p> ↳ Artichaut</p>
+                <p> ↳ artichaut</p>
                 <img src="assets/img/Carré potager 2024/artichaut.png" alt="Image" class="image-right" width="5%">
             </div>
         </a>
         <a href="#bourrache" class="smooth-scroll">
             <div class="container">
-                <p> ↳ Bourrache</p>
+                <p> ↳ bourache</p>
                 <img src="assets/img/Carré potager 2024/bourrache.jpg" alt="Image" class="image-right" width="5%">
             </div>
         </a>
         <a href="#carotte" class="smooth-scroll"> 
             <div class="container">
-                <p> ↳Carottes</p>
+                <p> ↳ carottes</p>
                 <img src="assets/img/Carré potager 2024/carottes.jpg" alt="Image" class="image-right" width="5%">
             </div>
         </a>
         <a href="#ciboulette" class="smooth-scroll">
             <div class="container">
-                <p> ↳ Ciboulette chinoise</p>
+                <p> ↳ ciboulette chinoise</p>
                 <img src="assets/img/Carré potager 2024/ciboulette-chinoise.jpg" alt="Image" class="image-right" width="5%">
             </div>
         </a>
         <a href="#liveche" class="smooth-scroll">
             <div class="container">
-                <p> ↳ Liveche</p>
+                <p> ↳ liveche</p>
                 <img src="assets/img/Carré potager 2024/liveche.jpg" alt="Image" class="image-right" width="5%">
             </div>
         </a>
         <a href="#physalis" class="smooth-scroll"> 
             <div class="container">
-                <p> ↳Physalis</p>
+                <p> ↳ physalis</p>
                 <img src="assets/img/Carré potager 2024/physalis.png" alt="Image" class="image-right" width="5%">
             </div>
         </a> 
         <a href="#violette" class="smooth-scroll">
             <div class="container">
-                <p> ↳ Violette</p>
+                <p> ↳ violette</p>
                 <img src="assets/img/Carré potager 2024/violette.jpg" alt="Image" class="image-right" width="5%">
             </div>
         </a>
         </div>
     </div>
-    <div class="plante" id="radis">
-        <h3 class="text-with-border">1] le Radis Rond </h3>
-        <p>
-            Le radis rond se consomme cru ou braisé. Il stimule le système immunitaire et lutte contre le vieillissement cellulaire. Le radis rond contient des vitamines B, stimule le système cardiovasculaire ( protection du coeur) et évite le développement de certains cancers. 
-        </p>
-    </div>
     <div class="plante" id="tomate-cerise">
         <h3 class="text-with-border">2] la Tomate-cerise</h3>
         <p>
-            La tomate cerise est un type de variété de tomate qu'on classe comme un fruit, cultivée comme cette dernière mais de taille réduite consommés comme légumes cruts ou cuites. La tomate cerise est une plante anti-oxydante et anti-inflammatoire.
+            La tomate cerise est une plante anti-oxydante et anti-inflammatoire. Se consomme crut ou cuite.
         </p>
     </div>
     <div class="plante" id="ail_rose">
-        <h3 class="text-with-border">3] l'Ail Rose</h3>
+        <h3 class="text-with-border">3] l'Ail rose</h3>
         <p>
-            L'Ail rose est une espèce de plantes herbacées vivaces de la famille des Amaryllidaceae. Elle renforce les défenses immunitaires, il est antimicrobien et antifongique.  et de triglycérides sanguins ( avec une consommation régulière).
+            L'ail rose contribue à la diminution du taux de cholestérol et de triglycérides sanguins ( avec une consommation régulière).
         </p>
     </div>
     <div class="plante" id="aneth">
         <h3 class="text-with-border">4] l'Aneth</h3>
         <p>
-            L'aneth, Anethum graveolens, est une espèce de plantes herbacées de la famille des Apiacées. C'est un anti-oxydant, il aide l'organisme à lutter contre le vieillissement cellulaire, ( à cause du stress ). Il favorise la digestion.
+            L'aneth anti-oxydant, il aide l'organisme à lutter contre le vieillissement cellulaire, ( à cause du stress ). Favorise la digestion.
         </p>
     </div>
     <div class="plante" id="artichaut">
         <h3 class="text-with-border">5] l'Artichaut</h3>
-        <p> 
+        <p>
             L'artichaut est riche en fibres. Très utilisé en phytotérapie ( infusions aux compléments alimentaires pour le foie et le système digestif ).
         </p>
     </div>
     <div class="plante" id="bourrache">
-        <h3 class="text-with-border">6] la Bourrache</h3>
+        <h3 class="text-with-border">6] la Bourache</h3>
         <p>
             La bourrache possède une texture sèche. Elle gêne la progression des limaces et est comestible ( Salade ), crue ou cuite. Elle attire les pollinisateurs
         </p>
@@ -139,7 +149,7 @@
     <div class="plante" id="liveche">
         <h3 class="text-with-border">9] la Liveche</h3>
         <p>
-          La livèche est à la fois une plante aromatique et médicinale .Elle traite pour la bonne circulation du sang, elle est anti-infectieuse ,emménagogue, sédative, digestive et diurétique. Elle contribue égalemment à diminuer les sensations de jambes lourdes. Elle est à consommer en tisanes infusions.
+          La livèche est à la fois une plante aromatique et médicinale .Elle traite pour la bonne circulation du sang, elle est anti-infectieuse ,emménagogue, sédative, digestive et diurétique. Elle contribue égalemment à diminuer les sensations de jambees lourdes.à consommer en tisanes infusions.
         </p>
     </div>
     <div class="plante" id="physalis">
