@@ -2,6 +2,7 @@
 
 > - Remplacer le descriptif des plantes par le scan des fiches de Julia (voir si ça rend bien)
 > - Ajouter les décorations (de la même manière que les plantes)
+> - Écrire les associations de culture
 > - Écrire l'historique du carré potager :
 		Quel thème ?
     Pourquoi celui-là ?
