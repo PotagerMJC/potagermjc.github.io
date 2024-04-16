@@ -44,7 +44,7 @@ h3{
 }
 .sommaire {
     margin-left: 2%; 
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 .container {
     display: flex;
@@ -75,7 +75,7 @@ h3{
     padding-right: 15px;
 }
 
-.smooth-scroll {
+a {
     cursor: pointer;
     color: rgb(0, 0, 0);
     text-decoration: underline;
@@ -84,7 +84,7 @@ h3{
     color: yellow;
 
 }
-.smooth-scroll:hover {
+/* .smooth-scroll:hover {
     color: blue;
 }
 .smooth-scroll:active {
@@ -100,7 +100,7 @@ h3{
     100% {
         opacity: 1;
     }
-}
+} */
 
 
 

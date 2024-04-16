@@ -13,16 +13,22 @@
 // });
 
 const deroule = document.querySelectorAll('.container');
-const text = document.querySelector('.plante');
+
 deroule.forEach((item) => {
     item.addEventListener('click', derouler);
-})
+});
+
 function derouler(event){
     event.preventDefault();
-    const isOpened = text.getAttribute('style') !== 'display: none;';
+    const container = event.currentTarget;
+    // Récupérer l'ID de la plante à partir de l'attribut href de l'ancre parente
+    const planteId = container.closest('a').getAttribute('href');
+    // Sélectionner l'élément .plante associé à partir de son ID
+    const plante = document.querySelector(planteId);
+    const isOpened = plante.style.display !== 'none';
     if (!isOpened){
-        text.setAttribute('style', '');
-    }else {
-        text.setAttribute('style', 'display: none;');
+        plante.style.display = 'block';
+    } else {
+        plante.style.display = 'none';
     }
 }
