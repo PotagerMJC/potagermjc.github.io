@@ -9,4 +9,5 @@
     La répartition des tâches (informatique, scientifique, mercredis).
     Expliquer les étapes (ce qui a été fait, comment, etc.)		
 > - Faire un QR code pour chaque scan PDF des plantes (hors site)
+> - menu "hamburger" pour naviguer plus facilement sur la page
 
