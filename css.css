@@ -44,7 +44,7 @@ h3{
 }
 .sommaire {
     margin-left: 2%; 
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 .container {
     display: flex;
@@ -108,5 +108,53 @@ h5{
     font-family: 'Courier New', Courier, monospace;
 }
 
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap; /* Empêche les éléments de se placer en colonne */
+    gap: 20px; /* Espacement entre les éléments */
+    width: 100%; /* Assure que le conteneur prend toute la largeur disponible */
+    max-width: 800px; /* Taille maximale du conteneur */
+    /* padding: 0 10px; Un peu de padding pour éviter que le contenu touche les bords de l'écran */
+}
 
+.logo h1{
+    padding: 0 10px;
+    margin: 0;
+}
+
+.logo-img {
+    width: 20%; /* Ajuste la largeur pour que le logo reste petit sur tous les écrans */
+    max-width: 150px; /* Limite la taille maximale de l'image */
+    height: auto;
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+    .logo {
+        gap: 10px; /* Espacement réduit pour les petits écrans */
+    }
+
+    .logo h1 {
+        font-size: 1.5em; /* Réduction de la taille de la police pour les petits écrans */
+    }
+
+    .logo-img {
+        width: 25%; /* Ajuste la largeur de l'image pour les petits écrans */
+        max-width: 100px; /* Taille maximale réduite pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.2em; /* Réduction de la taille de la police pour les très petits écrans */
+    }
+
+    .logo-img {
+        width: 30%;
+        max-width: 80px; /* Taille maximale encore réduite */
+    }
+}
 
