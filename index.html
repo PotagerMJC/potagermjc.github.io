@@ -13,6 +13,25 @@
             viewportMeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0'; // Vous pouvez définir maximum-scale à la valeur que vous préférez
         });
         </script>
+        <script>
+            async function fetchGitHubViews() {
+                const repo = 'PotagerMJC/potagermjc'; // Remplacez par votre dépôt
+                const token = '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'; // Remplacez par votre token GitHub
+                const url = `https://api.github.com/repos/${repo}/traffic/views`;
+    
+                const headers = new Headers({
+                    'Authorization': `token ${token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                });
+    
+                const response = await fetch(url, { headers: headers });
+                const data = await response.json();
+    
+                document.getElementById('views').textContent = data.count;
+            }
+    
+            document.addEventListener('DOMContentLoaded', fetchGitHubViews);
+        </script>
     <link rel="icon" type="image/vnd.icon" href="assets/img/favicon/favicon.ico">
 </head>
 <body>
@@ -353,7 +372,7 @@
             </div>
         </div>
     </div>
-    <a href="https://github.com/PotagerMJC/potagermjc.github.io/graphs/traffic">Accédez au compteur de vues</a>
-    <br><br><br><br><br><br>
+    <h1>Compteur de vues :</h1>
+    <p>Nombre de vues : <span id="views">Loading...</span></p>
 </body>
 </html>
