@@ -46,6 +46,25 @@ h3{
     margin-left: 2%; 
     margin-bottom: 30px;
 }
+
+.historique{
+    margin-left: 2%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.histo_btn{
+    font-weight: bolder;
+    padding: 20px;
+    padding-bottom: 0;
+    background-color: rgb(52, 143, 108);
+    color: white;
+    border: 5px solid darkgreen;
+    border-radius: 15px;
+    font-size: 80px;
+    font-family: 'zelda';
+}
+
 .container {
     display: flex;
     font-size: 20px;
