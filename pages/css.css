@@ -1,0 +1,25 @@
+body{
+    background-color: #202020;
+}
+#accueil{
+    text-align: center;
+    color: white;
+    background-size: 100%;
+    padding-bottom: 4%;
+}
+h2{
+    font-size: 200%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.listesites{
+    display: flex;
+    justify-content: space-around;
+}
+.projet a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(159, 200, 255);
+    display: block;
+    height: 100%;
+    width: 100%;
+}

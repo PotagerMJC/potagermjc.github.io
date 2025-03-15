@@ -1,0 +1,14 @@
+<header>
+        <ul>
+            <div class="gauche">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#membres">Membres</a></li>
+            </div>
+            <p id="nom">Club Informatique</p>
+            <div class="droite">
+                <li><a href="#decouvertes">Découvertes</a></li>
+                <li><a href="#projets">Projets</a></li>
+            </div>
+        </ul>
+    </header>
+    <br><br>
