@@ -9,7 +9,8 @@
   body {
     font-family: 'Arial', sans-serif;
     color: #fff;
-    background: #000;
+    background: #f0f0f0;
+    line-height: 1.6;
   }
   
   /* Header - Barre de navigation */
@@ -53,10 +54,10 @@
     color: #FFD700;
   }
   
-  /* Section Hero - Fond avec les photos */
+  /* Section Hero */
   .hero {
     height: 100vh;
-    background-image: url('../autres/ex1.jpg'); /* Remplacez par vos images */
+    background-image: url('carre-potager.jpg'); /* Remplacez par une image du carré potager */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -102,29 +103,108 @@
     color: #000;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: 10px;
   }
   
   .btn:hover {
     background-color: #FFA500;
   }
   
-  /* Sections générales */
-  section {
-    padding: 60px 20px;
+  /* Panel des boutons */
+  .panel {
+    padding: 50px 20px;
+    background-color: #2d2d2d;
     text-align: center;
   }
   
-  .about, .services, .contact {
-    background-color: #2c2c2c;
-    margin: 20px 0;
-    border-radius: 10px;
+  .panel-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  .panel-btn {
+    padding: 30px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    width: 100%; /* S'assurer que les boutons prennent toute la largeur disponible */
+    position: relative;
+    overflow: hidden;
   }
   
+  .panel-btn:hover {
+    transform: translateY(-5px); /* Effet d'élévation au survol */
+  }
+  
+  /* Feu (Informatique) */
+  .panel-btn.feu {
+    background-color: #FF4500;
+    background-image: url('../images/feu.gif'); /* Remplacer par une image de flammes */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+  }
+  
+  .panel-btn.feu:hover {
+    background-color: #FF6347;
+    box-shadow: 0 0 25px rgba(255, 69, 0, 0.8);
+  }
+  
+  /* Eau (Cuisine) */
+  .panel-btn.eau {
+    background-color: #4682B4;
+    background-image: url('../images/water_pa.gif'); /* Remplacer par une image de vagues ou gouttes d'eau */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 15px rgba(70, 130, 180, 0.6);
+  }
+  
+  .panel-btn.eau:hover {
+    background-color: #5F9EA0;
+    box-shadow: 0 0 20px rgba(70, 130, 180, 0.8);
+  }
+  
+  /* Terre (Historique) */
+  .panel-btn.terre {
+    background-color: #8B4513;
+    background-image: url('../images/terre2.gif'); /* Remplacer par une image de texture de terre */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 15px rgba(139, 69, 19, 0.5);
+  }
+  
+  .panel-btn.terre:hover {
+    background-color: #A0522D;
+    box-shadow: 0 0 20px rgba(139, 69, 19, 0.8);
+  }
+  
+  /* Vent (Scientifique) */
+  .panel-btn.vent {
+    background-color: #ADD8E6;
+    background-image: url('../images/vent.gif'); /* Remplacer par une image représentant le vent (lignes légères) */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
+  }
+  
+  .panel-btn.vent:hover {
+    background-color: #B0E0E6;
+    box-shadow: 0 0 15px rgba(173, 216, 230, 0.8);
+  }
+  
+  /* Footer */
   footer {
     background-color: #000;
     text-align: center;
