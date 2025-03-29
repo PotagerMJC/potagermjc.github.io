@@ -27,13 +27,25 @@
   
   .navbar {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%; /* S'assurer que la navbar prend toute la largeur */
   }
+  
+  .header-img {
+    width: 60px; /* Ajustez la taille selon vos besoins */
+    height: auto;
+    margin-right: 5px; /* Espacement entre l'image et le titre */
+    vertical-align: middle; /* Aligne l'image avec le texte */
+  }
+  
   
   .navbar h1 {
     color: #fff;
     font-size: 2rem;
+    display: inline-block;
+    vertical-align: middle;
   }
   
   .navbar nav ul {
@@ -217,3 +229,495 @@
     font-size: 1rem;
   }
   
+/* Section Cuisine */
+#cuisine {
+  background-color: #2d2d2d; /* Fond sombre comme les autres sections */
+  color: #fff; /* Texte en blanc pour la lisibilité */
+  padding: 50px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.recipe {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto 40px auto; /* Centre horizontalement */
+  padding: 30px 40px;
+  border: 1px solid #555; /* Bordure plus foncée */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+  color: #fff;
+  text-align: left; /* Texte aligné à gauche */
+}
+
+.recipe img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.recipe h3 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-top: 20px;
+  color: #FFD700; /* Doré pour rappeler le bouton principal */
+}
+
+.ingredients, .steps {
+  margin-top: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.ingredients ul, .steps ol {
+  margin: 0 auto;
+  text-align: left;
+  display: inline-block;
+}
+
+.ingredients li, .steps li {
+  margin-bottom: 10px;
+}
+
+.recipe h4 {
+  font-size: 1.5em;
+  color: #FFA500; /* Orange pour rester dans le thème chaleureux */
+}
+
+.recipe:hover {
+  transform: scale(1.02); /* Léger agrandissement au survol */
+  transition: transform 0.3s ease;
+}
+
+/* Section Historique */
+#historique {
+  background-color: #2d2d2d; /* Fond sombre */
+  color: #fff; /* Texte en blanc */
+  padding: 50px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#historique h2 {
+  font-size: 2em;
+  color: #FFD700; /* Doré comme dans la section cuisine */
+  margin-bottom: 20px;
+}
+
+.semaine {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto 40px auto; /* Centre horizontalement */
+  padding: 20px;
+  border: 1px solid #555; /* Bordure foncée */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.semaine h3 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-top: 10px;
+  color: #FFA500; /* Orange pour le contraste */
+}
+
+.semaine ul {
+  text-align: left;
+  width: 100%;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.semaine li {
+  margin-bottom: 10px;
+}
+
+.semaine img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.semaine:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Section Informatique */
+#informatique {
+  background-color: #2d2d2d; /* Fond sombre */
+  color: #fff; /* Texte en blanc */
+  padding: 50px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#informatique h2 {
+  font-size: 2em;
+  color: #FFD700; /* Doré comme les autres sections */
+  margin-bottom: 20px;
+}
+
+.etape {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.etape h3 {
+  font-size: 1.8em;
+  margin-top: 10px;
+  color: #FFA500;
+}
+
+.etape p {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.photo {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.etape:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Section Scientifique */
+#scientifique {
+  background-color: #2d2d2d; /* Fond sombre */
+  color: #fff; /* Texte en blanc */
+  padding: 50px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#scientifique h2 {
+  font-size: 2em;
+  color: #FFD700; /* Doré comme les autres sections */
+  margin-bottom: 20px;
+}
+
+.projet {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projet h3 {
+  font-size: 1.8em;
+  margin-top: 10px;
+  color: #FFA500;
+}
+
+.projet p {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.projet h4 {
+  font-size: 1.5em;
+  color: #FFD700;
+  margin-top: 20px;
+}
+
+.projet ul {
+  list-style-type: disc;
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.projet li {
+  margin-bottom: 10px;
+}
+
+.photo {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.projet:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header - Barre de navigation */
+header {
+  background-color: #333; /* Fond sombre pour le header */
+  padding: 20px;
+  position: relative; /* Pas de position fixed ici, on laisse défiler */
+  color: white;
+  z-index: 10;
+}
+
+header .navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header .navbar h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+header .navbar .links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+header .navbar .links a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  margin: 10px 0;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+header .navbar .links a:hover {
+  background-color: #4CAF50;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Section Cuisine */
+#cuisine {
+  background-color: #f5f5f5; /* Remet un fond gris clair pour la section cuisine */
+  padding: 20px;
+  text-align: center;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.recipe h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.recipe .ingredients, .recipe .steps {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.recipe .ingredients li, .recipe .steps li {
+  margin-bottom: 5px;
+}
+
+.recipe .ingredients h4, .recipe .steps h4 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Sections dynamiques */
+.content-section {
+  padding: 20px;
+}
+
+.semaine, .etape, .projet {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.semaine img, .etape img, .projet img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Historique Section */
+#historique h2 {
+  font-size: 2rem;
+}
+
+.semaine {
+  width: 100%;
+  margin: 0;
+}
+
+.recipe h3 {
+  font-size: 1.6rem;
+}
+
+.ingredients h4, .steps h4 {
+  font-size: 1.2rem;
+}
+
+.ingredients li, .steps li {
+  font-size: 1rem;
+  list-style-type: none;
+}
+
+/* Responsivité */
+@media screen and (max-width: 768px) {
+  header .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .navbar .links {
+    align-items: center;
+  }
+
+  header .navbar .links a {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .recipe {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .recipe h3 {
+    font-size: 1.4rem;
+  }
+
+  .ingredients h4, .steps h4 {
+    font-size: 1rem;
+  }
+
+  .ingredients li, .steps li {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .navbar .links a {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .hero {
+    height: 35vh;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}

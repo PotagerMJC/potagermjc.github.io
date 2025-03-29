@@ -5,18 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carré Potager</title>
   <link rel="stylesheet" href="./pages/css.css">
+  <link rel="icon" href="./images/logo-MJC-.png" type="image/png">
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="navbar">
+      <img src="./images/logo-MJC-.png" alt="logo mjc" class="header-img">
       <h1>Carré Potager</h1>
       <nav>
         <ul>
-          <li><a href="#historique">Historique</a></li>
-          <li><a href="#informatique">Informatique</a></li>
-          <li><a href="#scientifique">Scientifique</a></li>
-          <li><a href="#cuisine">Cuisine</a></li>
+          <li><a href="#" onclick="showSection(event, 'historique')">Historique</a></li>
+          <li><a href="#" onclick="showSection(event, 'informatique')">Informatique</a></li>
+          <li><a href="#" onclick="showSection(event, 'scientifique')">Scientifique</a></li>
+          <li><a href="#" onclick="showSection(event, 'cuisine')">Cuisine</a></li>
         </ul>
       </nav>
     </div>
@@ -27,33 +29,193 @@
     <div class="hero-content">
       <h2>Bienvenue dans notre Carré Potager</h2>
       <p>Un projet alliant nature, technologie et savoir-faire culinaire</p>
-      <a href="#historique" class="btn">Découvrir le projet</a>
+      <a href="#" onclick="showSection(event, 'historique')" class="btn">Découvrir le projet</a>
     </div>
   </section>
 
   <!-- Section Panel de Boutons -->
   <section class="panel">
     <div class="panel-content">
-      <a href="historique.html" class="panel-btn terre">
+      <a href="#" onclick="showSection(event, 'historique')" class="panel-btn terre">
         Historique du Carré Potager
       </a>
-      <a href="informatique.html" class="panel-btn feu">
+      <a href="#" onclick="showSection(event, 'informatique')" class="panel-btn feu">
         La Partie Informatique
       </a>
-      <a href="scientifique.html" class="panel-btn vent">
+      <a href="#" onclick="showSection(event, 'scientifique')" class="panel-btn vent">
         Le Carré Potager Scientifique
       </a>
-      <a href="cuisine.html" class="panel-btn eau">
+      <a href="#" onclick="showSection(event, 'cuisine')" class="panel-btn eau">
         La Cuisine du Carré Potager
       </a>
     </div>
   </section>
 
+  <!-- Sections Dynamiques -->
+  <section id="historique" class="content-section" style="display:none;">
+      <h2>Journal de Bord</h2>
+      
+      <div class="semaine">
+        <h3>Semaine 1</h3>
+        <ul>
+          <li>Préparation du terrain</li>
+          <li>Plantation des premières graines</li>
+          <li>Arrosage initial</li>
+        </ul>
+        <img src="semaine1.jpg" alt="Photo semaine 1">
+      </div>
+    
+      <div class="semaine">
+        <h3>Semaine 2</h3>
+        <ul>
+          <li>Installation des tuteurs</li>
+          <li>Ajout de compost</li>
+          <li>Observation de la germination</li>
+        </ul>
+        <img src="semaine2.jpg" alt="Photo semaine 2">
+      </div>
+    </section>
+    
+  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Le Carré Potager. Tous droits réservés.</p>
-  </footer>
+  <section id="informatique" class="content-section" style="display:none;">
+      <h2>Conception du Site</h2>
+    
+      <div class="etape">
+        <h3>Étape 1 : Les Idées</h3>
+        <p>Lors de cette étape, nous avons discuté des fonctionnalités du site et de son design. Nous avons réfléchi à l'ergonomie et à l'expérience utilisateur, tout en imaginant comment rendre le site interactif et attrayant.</p>
+        <img src="idées.jpg" alt="Photo des enfants en train de réfléchir aux idées" class="photo">
+      </div>
+    
+      <div class="etape">
+        <h3>Étape 2 : Insertion du Thème et des Boutons GIF</h3>
+        <p>Nous avons ensuite choisi un thème sombre pour garder une continuité avec le design des autres sections. Pour rendre le site plus dynamique, nous avons intégré des boutons GIF animés. Ces boutons ajoutent une touche interactive au site.</p>
+        <img src="boutons-gif.jpg" alt="Exemple de bouton GIF" class="photo">
+      </div>
+    
+      <div class="etape">
+        <h3>Étape 3 : Répartition des Tâches</h3>
+        <p>Chacun de nous a pris en charge des tâches spécifiques : certains se sont concentrés sur la partie front-end (HTML/CSS), tandis que d'autres ont travaillé sur l'intégration des fonctionnalités JavaScript et l'optimisation du site pour les appareils mobiles.</p>
+        <img src="repartition-taches.jpg" alt="Photo des enfants en train de coder" class="photo">
+      </div>
+    
+      <div class="etape">
+        <h3>Étape 4 : Le Code</h3>
+        <p>Enfin, nous avons passé du temps à coder, tester, et améliorer le site pour qu'il soit fonctionnel et esthétique. Voici un aperçu du code utilisé pour créer le site.</p>
+        <img src="code-site.jpg" alt="Exemple de code" class="photo">
+      </div>
+    
+  </section>
+
+  <section id="scientifique" class="content-section" style="display:none;">
+      <h2>Projets Scientifiques</h2>
+    
+      <div class="projet">
+        <h3>Projet 1 : L'Éolienne</h3>
+        <p>Pour ce projet, nous avons conçu une éolienne fonctionnelle en utilisant des matériaux recyclés. L'objectif était de comprendre comment les éoliennes génèrent de l'énergie à partir du vent.</p>
+        <img src="eolienne.jpg" alt="Photo de l'éolienne" class="photo">
+        <h4>Matériaux Utilisés</h4>
+        <ul>
+          <li>Bois recyclé pour la structure</li>
+          <li>Plastic pour les pales</li>
+          <li>Moteur électrique pour transformer l'énergie du vent</li>
+        </ul>
+        <h4>Comment cela a été réalisé</h4>
+        <p>Nous avons d'abord conçu un modèle de l'éolienne, puis avons découpé et assemblé les pièces en utilisant les matériaux choisis. Le moteur a été relié aux pales pour générer de l'électricité à chaque rotation.</p>
+      </div>
+    
+      <div class="projet">
+        <h3>Projet 2 : Le Pont</h3>
+        <p>Dans ce projet, nous avons conçu un pont miniature pour tester la résistance des matériaux et la capacité à supporter des charges. L'objectif était de créer un pont solide et stable.</p>
+        <img src="pont.jpg" alt="Photo du pont" class="photo">
+        <h4>Matériaux Utilisés</h4>
+        <ul>
+          <li>Carton pour la structure principale</li>
+          <li>Colle chaude pour l'assemblage</li>
+          <li>Fil de fer pour renforcer les joints</li>
+        </ul>
+        <h4>Comment cela a été réalisé</h4>
+        <p>Après avoir dessiné les plans du pont, nous avons découpé le carton pour la base et les arches. Ensuite, nous avons renforcé les points de connexion avec du fil de fer et utilisé de la colle chaude pour fixer les éléments.</p>
+      </div>
+    
+  </section>
+
+  <section id="cuisine" class="content-section recipe-container" style="display:none;">
+    <div class="recipe">
+      <h3>Soupe de Légumes du Potager</h3>
+      <img src="images/soupe-legumes.jpg" alt="Photo Soupe de Légumes">
+      <div class="ingredients">
+        <h4>Ingrédients :</h4>
+        <ul>
+          <li>Carottes</li>
+          <li>Pommes de terre</li>
+          <li>Poireaux</li>
+          <li>Oignon</li>
+          <li>Herbes fraîches (persil, thym)</li>
+          <li>Sel et poivre</li>
+        </ul>
+      </div>
+      <div class="steps">
+        <h4>Recette :</h4>
+        <ol>
+          <li>Pelez et coupez tous les légumes en morceaux.</li>
+          <li>Faites cuire les légumes dans une grande casserole d'eau pendant environ 30 minutes.</li>
+          <li>Ajoutez les herbes, le sel et le poivre. Laissez mijoter 10 minutes supplémentaires.</li>
+          <li>Mixez le tout pour obtenir une soupe lisse et onctueuse.</li>
+          <li>Sers chaud, accompagné de pain frais.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="recipe">
+      <h3>Salade de Tomates et Concombres</h3>
+      <img src="images/salade-tomates.jpg" alt="Photo Salade de Tomates et Concombres">
+      <div class="ingredients">
+        <h4>Ingrédients :</h4>
+        <ul>
+          <li>Tomates fraîches</li>
+          <li>Concombres</li>
+          <li>Oignon rouge</li>
+          <li>Vinaigre balsamique</li>
+          <li>Huile d'olive</li>
+          <li>Herbes fraîches (basilic, menthe)</li>
+        </ul>
+      </div>
+      <div class="steps">
+        <h4>Recette :</h4>
+        <ol>
+          <li>Coupez les tomates et le concombre en tranches fines.</li>
+          <li>Ajoutez l'oignon rouge coupé en rondelles.</li>
+          <li>Dans un bol, mélangez le vinaigre, l'huile d'olive, et les herbes hachées.</li>
+          <li>Assaisonnez la salade avec cette vinaigrette et mélangez bien.</li>
+          <li>Servez frais avec un peu de fromage feta émietté (facultatif).</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Vous pouvez ajouter plus de recettes de la même manière -->
+  </section>
+
+
+
+  <script>
+    // Fonction pour afficher la section correspondante sans faire défiler la page
+    function showSection(event, sectionId) {
+      // Empêcher le comportement par défaut du lien
+      event.preventDefault();
+
+      // Masquer toutes les sections
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => section.style.display = 'none');
+
+      // Afficher la section cliquée
+      const sectionToShow = document.getElementById(sectionId);
+      if (sectionToShow) {
+        sectionToShow.style.display = 'block';
+      }
+    }
+    
+  </script>
 
 </body>
 </html>
