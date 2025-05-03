@@ -15,10 +15,10 @@
       <h1>Carré Potager</h1>
       <nav>
         <ul>
-          <li><a href="#" onclick="showSection(event, 'historique')">Historique</a></li>
-          <li><a href="#" onclick="showSection(event, 'informatique')">Informatique</a></li>
-          <li><a href="#" onclick="showSection(event, 'scientifique')">Materiel</a></li>
-          <li><a href="#" onclick="showSection(event, 'cuisine')">Cuisine</a></li>
+          <li><a href="#historique">Historique</a></li>
+          <li><a href="#informatique">Informatique</a></li>
+          <li><a href="#scientifique">Matériel</a></li>
+          <li><a href="#cuisine">Cuisine</a></li>
         </ul>
       </nav>
     </div>
@@ -36,16 +36,16 @@
   <!-- Section Panel de Boutons -->
   <section class="panel">
     <div class="panel-content">
-      <a href="#" onclick="showSection(event, 'historique')" class="panel-btn terre">
+      <a href="#historique" class="panel-btn terre">
         Historique du Carré Potager
       </a>
-      <a href="#" onclick="showSection(event, 'informatique')" class="panel-btn feu">
+      <a href="#informatique" class="panel-btn feu">
         La Partie Informatique
       </a>
-      <a href="#" onclick="showSection(event, 'scientifique')" class="panel-btn vent">
+      <a href="#scientifique" class="panel-btn vent">
         Les projets materiels
       </a>
-      <a href="#" onclick="showSection(event, 'cuisine')" class="panel-btn eau">
+      <a href="#cuisine" class="panel-btn eau">
         La Cuisine du Carré Potager
       </a>
     </div>
@@ -54,7 +54,6 @@
   <!-- Sections Dynamiques -->
   <section id="historique" class="content-section" style="display:none;">
       <h2>Journal de Bord</h2>
-      
       <div class="semaine">
         <h3>Semaine 1</h3>
         <ul>
@@ -280,27 +279,37 @@
 
     <!-- Vous pouvez ajouter plus de recettes de la même manière -->
   </section>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sections = document.querySelectorAll('.content-section');
+  const links = document.querySelectorAll('a[href^="#"]');
 
-
-
-  <script>
-    // Fonction pour afficher la section correspondante sans faire défiler la page
-    function showSection(event, sectionId) {
-      // Empêcher le comportement par défaut du lien
-      event.preventDefault();
-
-      // Masquer toutes les sections
-      const sections = document.querySelectorAll('.content-section');
-      sections.forEach(section => section.style.display = 'none');
-
-      // Afficher la section cliquée
-      const sectionToShow = document.getElementById(sectionId);
-      if (sectionToShow) {
-        sectionToShow.style.display = 'block';
-      }
+  // Fonction pour afficher une section et cacher les autres
+  function showSectionById(id) {
+    sections.forEach(section => {
+      section.style.display = 'none';
+    });
+    const target = document.getElementById(id);
+    if (target) {
+      target.style.display = 'block';
+      target.scrollIntoView({ behavior: 'smooth' });
     }
-    
-  </script>
+  }
+
+  // Attacher l'événement à tous les liens internes
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href').substring(1);
+      if (document.getElementById(targetId)) {
+        e.preventDefault();
+        showSectionById(targetId);
+      }
+    });
+  });
+
+  // ❌ Aucun affichage par défaut ici
+});
+</script>
 
 </body>
 </html>

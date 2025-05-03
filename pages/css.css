@@ -702,6 +702,10 @@ header .navbar .links a:hover {
     font-size: 0.9rem;
   }
 }
+.content-section {
+  display: none;
+}
+
 
 @media screen and (max-width: 480px) {
   header .navbar .links a {
