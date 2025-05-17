@@ -231,8 +231,8 @@
   
 /* Section Cuisine */
 #cuisine {
-  background-color: #2d2d2d; /* Fond sombre comme les autres sections */
-  color: #fff; /* Texte en blanc pour la lisibilité */
+  background-color: #bc3f3f; /* Fond sombre comme les autres sections */
+  color: #f80000; /* Texte en blanc pour la lisibilité */
   padding: 50px 20px;
   text-align: center;
   display: flex;
@@ -255,9 +255,9 @@
   padding: 30px 40px;
   border: 1px solid #555; /* Bordure plus foncée */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(15, 13, 173, 0.1);
   background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
-  color: #fff;
+  color: #2297a1;
   text-align: left; /* Texte aligné à gauche */
 }
 
@@ -293,11 +293,6 @@
 .recipe h4 {
   font-size: 1.5em;
   color: #FFA500; /* Orange pour rester dans le thème chaleureux */
-}
-
-.recipe:hover {
-  transform: scale(1.02); /* Léger agrandissement au survol */
-  transition: transform 0.3s ease;
 }
 
 /* Section Historique */
@@ -336,12 +331,16 @@
   border: 1px solid #555;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+  text-align: left;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+                      
 
 
 .semaine h3 {
@@ -372,10 +371,6 @@
   margin-top: 15px;
 }
 
-.semaine:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
-}
 
 /* Section Informatique */
 #informatique {
@@ -426,11 +421,6 @@
   margin-top: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-}
-
-.etape:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
 }
 
 /* Section Scientifique */
@@ -501,10 +491,7 @@
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-.projet:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
-}
+
 
 /* Global Reset */
 * {
