@@ -9,7 +9,7 @@
   body {
     font-family: 'Arial', sans-serif;
     color: #fff;
-    background: #f0f0f0;
+    background: #302c2c;
     line-height: 1.6;
   }
   
@@ -302,13 +302,24 @@
 
 /* Section Historique */
 #historique {
-  background-color: #2d2d2d; /* Fond sombre */
-  color: #fff; /* Texte en blanc */
+  background-color: #2d2d2d;
+  color: #fff;
   padding: 50px 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  /* Centrage vertical s'il y a assez de hauteur */
+  width: 100%;
+}
+
+.content-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:20px;
 }
 
 #historique h2 {
@@ -319,18 +330,19 @@
 
 .semaine {
   width: 80%;
-  max-width: 900px;
-  margin: 0 auto 40px auto; /* Centre horizontalement */
+  max-width: 700px;
+  margin: 0 auto 40px auto;
   padding: 20px;
-  border: 1px solid #555; /* Bordure foncée */
+  border: 1px solid #555;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
-  text-align: left;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 .semaine h3 {
   text-align: center;
@@ -341,7 +353,8 @@
 
 .semaine ul {
   text-align: left;
-  width: 100%;
+  max-width: 600px;
+  margin: 10px auto;
   margin-top: 10px;
   padding-left: 20px;
 }
@@ -543,7 +556,7 @@ header .navbar .links a:hover {
 
 /* Hero Section */
 .hero {
-  height: 50vh;
+  height: 30vh;
   background-position: center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.5);
@@ -618,10 +631,6 @@ header .navbar .links a:hover {
   color: #333;
 }
 
-/* Sections dynamiques */
-.content-section {
-  padding: 20px;
-}
 
 .semaine, .etape, .projet {
   width: 100%;
@@ -673,10 +682,6 @@ header .navbar .links a:hover {
     padding: 10px;
   }
 
-  .hero {
-    height: 40vh;
-  }
-
   .hero h2 {
     font-size: 1.5rem;
   }
@@ -711,10 +716,6 @@ header .navbar .links a:hover {
   header .navbar .links a {
     font-size: 1rem;
     padding: 8px;
-  }
-
-  .hero {
-    height: 35vh;
   }
 
   .hero h2 {
