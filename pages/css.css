@@ -570,7 +570,7 @@ header .navbar .links a:hover {
 
 /* Section Cuisine */
 #cuisine {
-  background-color: #f5f5f5; /* Remet un fond gris clair pour la section cuisine */
+  background-color: #2d2d2d; /* Remet un fond gris clair pour la section cuisine */
   padding: 20px;
   text-align: center;
 }
@@ -587,7 +587,7 @@ header .navbar .links a:hover {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #000000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
