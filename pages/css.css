@@ -9,7 +9,7 @@
   --color-header-bg: rgba(0, 0, 0, 0.6);
   --color-border-grey: #555;
   --color-shadow-light: rgba(255, 255, 255, 0.1);
-  --color-shadow-blue: rgba(15, 13, 173, 0.1);
+  --color-shadow-blue: rgba(255, 255, 255, 0.1);
   --color-blue-cuisine-text: #2297a1; /* Couleur spécifique au texte de la section cuisine */
 }
 
@@ -173,16 +173,7 @@ header {
 }
 
 /* Pour que le texte des boutons soit toujours lisible sur l'image de fond */
-.panel-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Overlay sombre */
-    z-index: 1;
-}
+
 
 .panel-btn span { /* Le texte doit être au-dessus de l'overlay */
     position: relative;
