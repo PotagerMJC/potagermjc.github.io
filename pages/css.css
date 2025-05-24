@@ -81,7 +81,7 @@ header {
 
 /* Section Hero */
 .hero {
-  height: 45vh;
+  height: 40vh;
   background-image: url('carre-potager.jpg');
   background-size: cover;
   background-position: center;
@@ -170,17 +170,6 @@ header {
   overflow: hidden;
 }
 
-/* Pour que le texte des boutons soit toujours lisible sur l'image de fond */
-.panel-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Overlay sombre */
-    z-index: 1;
-}
 
 .panel-btn span { /* Le texte doit être au-dessus de l'overlay */
     position: relative;
@@ -391,7 +380,117 @@ footer p {
   box-shadow: 0 4px 8px var(--color-shadow-light);
 }
 
-/* Media Queries pour la responsivité */
+/* --- Media Queries pour la responsivité --- */
+
+/* Pour les écrans jusqu'à 767px de large (smartphones et petits tablettes) */
+@media screen and (max-width: 767px) {
+  /* Ajustements généraux pour le padding des sections sur mobile */
+  #cuisine,
+  #historique,
+  #informatique,
+  #scientifique {
+    padding: 30px 15px; /* Réduit le padding horizontal pour mieux utiliser l'espace */
+  }
+
+  /* Ajustements pour les cartes (recettes, semaines, étapes, projets) */
+  .recipe,
+  .semaine,
+  .etape,
+  .projet {
+    width: 95%; /* Prend presque toute la largeur, laissant une petite marge */
+    padding: 20px 15px; /* Réduit le padding interne pour éviter les bordures trop épaisses */
+    margin-left: auto; /* Centre l'élément */
+    margin-right: auto; /* Centre l'élément */
+  }
+
+  /* Ajustement pour le header sur mobile */
+  header {
+    padding: 15px 20px; /* Réduit le padding du header sur mobile */
+  }
+
+  .navbar h1 {
+    font-size: 1.8rem; /* Taille de police légèrement réduite pour le titre du header */
+  }
+
+  .navbar nav ul {
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les liens de navigation */
+  }
+
+  .navbar nav ul li {
+    margin: 5px 10px; /* Réduit la marge entre les liens */
+  }
+
+  .navbar nav ul li a {
+    font-size: 1rem; /* Taille de police réduite pour les liens de navigation */
+  }
+
+  /* Ajustement pour le contenu Hero sur mobile */
+  .hero h2 {
+    font-size: 2.2rem; /* Taille de police réduite pour le titre du hero */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Taille de police réduite pour le paragraphe du hero */
+  }
+
+  .hero-content {
+    padding: 15px; /* Réduit le padding du contenu hero */
+  }
+
+  /* Ajustements pour les boutons du panel sur mobile */
+  .panel-btn {
+    font-size: 1.2rem; /* Taille de police réduite pour les boutons */
+    padding: 20px; /* Réduit le padding des boutons */
+  }
+
+  .panel-content {
+    grid-template-columns: 1fr; /* S'assure qu'il n'y a qu'une colonne sur mobile */
+  }
+
+  /* Ajustements pour les titres h2 des sections */
+  #cuisine h2,
+  #historique h2,
+  #informatique h2,
+  #scientifique h2 {
+    font-size: 1.8em; /* Réduit la taille du titre de section */
+  }
+
+  /* Ajustements pour les titres h3 et h4 à l'intérieur des cartes */
+  .recipe h3,
+  .semaine h3,
+  .etape h3,
+  .projet h3 {
+    font-size: 1.5em; /* Réduit la taille des titres de cartes */
+  }
+
+  .recipe h4,
+  .projet h4 {
+    font-size: 1.3em; /* Réduit la taille des sous-titres de cartes */
+  }
+
+  /* Ajustements pour les listes */
+  .ingredients ul,
+  .steps ol,
+  .semaine ul,
+  .projet ul {
+    padding-left: 15px; /* Réduit l'indentation des listes */
+  }
+
+  .ingredients li,
+  .steps li,
+  .semaine li,
+  .projet li {
+    font-size: 0.95em; /* Réduit légèrement la taille du texte des listes */
+  }
+
+  /* Ajustement pour la photo dans les sections Informatique/Scientifique */
+  .photo {
+    width: 95%; /* Prend presque toute la largeur */
+  }
+}
+
+/* Pour les écrans de 768px et plus (tablettes et desktops) */
 @media screen and (min-width: 768px) {
   /* Header */
   header {
@@ -422,6 +521,7 @@ footer p {
   }
 }
 
+/* Pour les écrans de 1024px et plus (grands desktops) */
 @media screen and (min-width: 1024px) {
   /* Panel de boutons */
   .panel-content {
