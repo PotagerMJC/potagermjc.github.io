@@ -1,715 +1,445 @@
+/* Variables CSS pour les couleurs */
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-dark-grey-1: #302c2c;
+  --color-dark-grey-2: #2d2d2d;
+  --color-gold: #FFD700;
+  --color-orange: #FFA500;
+  --color-header-bg: rgba(0, 0, 0, 0.6);
+  --color-border-grey: #555;
+  --color-shadow-light: rgba(255, 255, 255, 0.1);
+  --color-shadow-blue: rgba(15, 13, 173, 0.1);
+  --color-blue-cuisine-text: #2297a1; /* Couleur spécifique au texte de la section cuisine */
+}
+
 /* Réinitialisation des marges et padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Définition du fond global */
-  body {
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    background: #302c2c;
-    line-height: 1.6;
-  }
-  
-  /* Header - Barre de navigation */
-  header {
-    background-color: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 20px 50px;
-    /*le 50px est la distance de l'accueil au coté gauche de l'écran*/
-    z-index: 1000;
-  }
-  
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* S'assurer que la navbar prend toute la largeur */
-  }
-  
-  .header-img {
-    width: 60px; /* Ajustez la taille selon vos besoins */
-    height: auto;
-    margin-right: 5px; /* Espacement entre l'image et le titre */
-    vertical-align: middle; /* Aligne l'image avec le texte */
-  }
-  
-  
-  .navbar h1 {
-    color: #fff;
-    font-size: 2rem;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  
-  .navbar nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  .navbar nav ul li {
-    margin-left: 20px;
-  }
-  
-  .navbar nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  
-  .navbar nav ul li a:hover {
-    color: #FFD700;
-  }
-  
-  /* Section Hero */
-  .hero {
-    height: 100vh;
-    background-image: url('carre-potager.jpg'); /* Remplacez par une image du carré potager */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    z-index: 0;
-  }
-  
-  .hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-  }
-  
-  .hero-content {
-    max-width: 600px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-  }
-  
-  .hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    background-color: #FFD700;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    display: inline-block;
-    margin: 10px;
-  }
-  
-  .btn:hover {
-    background-color: #FFA500;
-  }
-  
-  /* Panel des boutons */
-  .panel {
-    padding: 50px 20px;
-    background-color: #2d2d2d;
-    text-align: center;
-  }
-  
-  .panel-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Deux colonnes */
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .panel-btn {
-    padding: 30px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 1.4rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    transition: transform 0.3s ease;
-    text-align: center;
-    width: 100%; /* S'assurer que les boutons prennent toute la largeur disponible */
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .panel-btn:hover {
-    transform: translateY(-5px); /* Effet d'élévation au survol */
-  }
-  
-  /* Feu (Informatique) */
-  .panel-btn.feu {
-    background-color: #FF4500;
-    background-image: url('../images/feu.gif'); /* Remplacer par une image de flammes */
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
-  }
-  
-  .panel-btn.feu:hover {
-    background-color: #FF6347;
-    box-shadow: 0 0 25px rgba(255, 69, 0, 0.8);
-  }
-  
-  /* Eau (Cuisine) */
-  .panel-btn.eau {
-    background-color: #4682B4;
-    background-image: url('../images/water_pa.gif'); /* Remplacer par une image de vagues ou gouttes d'eau */
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 0 15px rgba(70, 130, 180, 0.6);
-  }
-  
-  .panel-btn.eau:hover {
-    background-color: #5F9EA0;
-    box-shadow: 0 0 20px rgba(70, 130, 180, 0.8);
-  }
-  
-  /* Terre (Historique) */
-  .panel-btn.terre {
-    background-color: #8B4513;
-    background-image: url('../images/terre2.gif'); /* Remplacer par une image de texture de terre */
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 0 15px rgba(139, 69, 19, 0.5);
-  }
-  
-  .panel-btn.terre:hover {
-    background-color: #A0522D;
-    box-shadow: 0 0 20px rgba(139, 69, 19, 0.8);
-  }
-  
-  /* Vent (Scientifique) */
-  .panel-btn.vent {
-    background-color: #ADD8E6;
-    background-image: url('../images/vent.gif'); /* Remplacer par une image représentant le vent (lignes légères) */
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
-  }
-  
-  .panel-btn.vent:hover {
-    background-color: #B0E0E6;
-    box-shadow: 0 0 15px rgba(173, 216, 230, 0.8);
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #000;
-    text-align: center;
-    padding: 20px;
-    color: #fff;
-  }
-  
-  footer p {
-    font-size: 1rem;
-  }
-  
-/* Section Cuisine */
-#cuisine {
-  background-color: #bc3f3f; /* Fond sombre comme les autres sections */
-  color: #f80000; /* Texte en blanc pour la lisibilité */
-  padding: 50px 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.recipe-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.recipe {
-  width: 80%;
-  max-width: 900px;
-  margin: 0 auto 40px auto; /* Centre horizontalement */
-  padding: 30px 40px;
-  border: 1px solid #555; /* Bordure plus foncée */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(15, 13, 173, 0.1);
-  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
-  color: #2297a1;
-  text-align: left; /* Texte aligné à gauche */
-}
-
-.recipe img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.recipe h3 {
-  text-align: center;
-  font-size: 1.8em;
-  margin-top: 20px;
-  color: #FFD700; /* Doré pour rappeler le bouton principal */
-}
-
-.ingredients, .steps {
-  margin-top: 20px;
-  text-align: left;
-  width: 100%;
-}
-
-.ingredients ul, .steps ol {
-  margin: 0 auto;
-  text-align: left;
-  display: inline-block;
-}
-
-.ingredients li, .steps li {
-  margin-bottom: 10px;
-}
-
-.recipe h4 {
-  font-size: 1.5em;
-  color: #FFA500; /* Orange pour rester dans le thème chaleureux */
-}
-
-/* Section Historique */
-#historique {
-  background-color: #2d2d2d;
-  color: #fff;
-  padding: 50px 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* Centrage vertical s'il y a assez de hauteur */
-  width: 100%;
-}
-
-.content-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding:20px;
-}
-
-#historique h2 {
-  font-size: 2em;
-  color: #FFD700; /* Doré comme dans la section cuisine */
-  margin-bottom: 20px;
-}
-
-.semaine {
-  width: 80%;
-  max-width: 700px;
-  margin: 0 auto 40px auto;
-  padding: 20px;
-  border: 1px solid #555;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
-  text-align: left;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-                      
-
-
-.semaine h3 {
-  text-align: center;
-  font-size: 1.8em;
-  margin-top: 10px;
-  color: #FFA500; /* Orange pour le contraste */
-}
-
-.semaine ul {
-  text-align: left;
-  max-width: 600px;
-  margin: 10px auto;
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.semaine li {
-  margin-bottom: 10px;
-}
-
-.semaine img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-top: 15px;
-}
-
-
-/* Section Informatique */
-#informatique {
-  background-color: #2d2d2d; /* Fond sombre */
-  color: #fff; /* Texte en blanc */
-  padding: 50px 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#informatique h2 {
-  font-size: 2em;
-  color: #FFD700; /* Doré comme les autres sections */
-  margin-bottom: 20px;
-}
-
-.etape {
-  width: 80%;
-  max-width: 900px;
-  margin: 0 auto 40px auto;
-  padding: 20px;
-  border: 1px solid #555;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  background-color: rgba(0, 0, 0, 0.6);
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.etape h3 {
-  font-size: 1.8em;
-  margin-top: 10px;
-  color: #FFA500;
-}
-
-.etape p {
-  font-size: 1.1em;
-  margin-top: 10px;
-}
-
-.photo {
-  width: 80%;
-  max-width: 800px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-}
-
-/* Section Scientifique */
-#scientifique {
-  background-color: #2d2d2d; /* Fond sombre */
-  color: #fff; /* Texte en blanc */
-  padding: 50px 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#scientifique h2 {
-  font-size: 2em;
-  color: #FFD700; /* Doré comme les autres sections */
-  margin-bottom: 20px;
-}
-
-.projet {
-  width: 80%;
-  max-width: 900px;
-  margin: 0 auto 40px auto;
-  padding: 20px;
-  border: 1px solid #555;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  background-color: rgba(0, 0, 0, 0.6);
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.projet h3 {
-  font-size: 1.8em;
-  margin-top: 10px;
-  color: #FFA500;
-}
-
-.projet p {
-  font-size: 1.1em;
-  margin-top: 10px;
-}
-
-.projet h4 {
-  font-size: 1.5em;
-  color: #FFD700;
-  margin-top: 20px;
-}
-
-.projet ul {
-  list-style-type: disc;
-  margin-top: 10px;
-  text-align: left;
-  width: 100%;
-}
-
-.projet li {
-  margin-bottom: 10px;
-}
-
-.photo {
-  width: 80%;
-  max-width: 800px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-}
-
-
-
-/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Définition du fond global */
+body {
+  font-family: 'Arial', sans-serif;
+  color: var(--color-white);
+  background: var(--color-dark-grey-1);
+  line-height: 1.6;
+}
+
 /* Header - Barre de navigation */
 header {
-  background-color: #333; /* Fond sombre pour le header */
-  padding: 20px;
-  position: relative; /* Pas de position fixed ici, on laisse défiler */
-  color: white;
-  z-index: 10;
+  background-color: var(--color-header-bg);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px 50px;
+  z-index: 1000;
 }
 
-header .navbar {
+.navbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Par défaut pour mobile, s'ajuste en media query */
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
-header .navbar h1 {
+.header-img {
+  width: 60px;
+  height: auto;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.navbar h1 {
+  color: var(--color-white);
   font-size: 2rem;
-  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-header .navbar .links {
+.navbar nav ul {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  margin-top: 10px;
+  margin-top: 10px; /* Espacement pour mobile */
 }
 
-header .navbar .links a {
-  font-size: 1.2rem;
+.navbar nav ul li {
+  margin-left: 20px;
+}
+
+.navbar nav ul li a {
+  color: var(--color-white);
   text-decoration: none;
-  color: white;
-  margin: 10px 0;
-  padding: 10px;
-  transition: background-color 0.3s;
+  font-size: 1.2rem;
 }
 
-header .navbar .links a:hover {
-  background-color: #4CAF50;
-  border-radius: 5px;
+.navbar nav ul li a:hover {
+  color: var(--color-gold);
 }
 
-/* Hero Section */
+/* Section Hero */
 .hero {
-  height: 30vh;
-  background-position: center;
+  height: 100vh;
+  background-image: url('carre-potager.jpg');
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+  position: relative;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 .hero-content {
+  max-width: 600px;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--color-header-bg);
   border-radius: 10px;
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
 }
 
 .hero h2 {
-  font-size: 2rem;
-  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 1rem;
-  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-/* Section Cuisine */
-#cuisine {
-  background-color: #2d2d2d; /* Remet un fond gris clair pour la section cuisine */
-  padding: 20px;
+.btn {
+  padding: 10px 20px;
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-orange);
+}
+
+/* Panel des boutons */
+.panel {
+  padding: 50px 20px;
+  background-color: var(--color-dark-grey-2);
   text-align: center;
 }
 
-.recipe-container {
+.panel-content {
+  display: grid;
+  grid-template-columns: 1fr; /* Par défaut une colonne pour mobile */
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.panel-btn {
+  padding: 30px;
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pour que le texte des boutons soit toujours lisible sur l'image de fond */
+.panel-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Overlay sombre */
+    z-index: 1;
+}
+
+.panel-btn span { /* Le texte doit être au-dessus de l'overlay */
+    position: relative;
+    z-index: 2;
+}
+
+.panel-btn:hover {
+  transform: translateY(-5px);
+}
+
+/* Styles spécifiques aux boutons du panel */
+.panel-btn.feu {
+  background-color: #FF4500;
+  background-image: url('../images/feu.gif');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+}
+
+.panel-btn.feu:hover {
+  background-color: #FF6347;
+  box-shadow: 0 0 25px rgba(255, 69, 0, 0.8);
+}
+
+.panel-btn.eau {
+  background-color: #4682B4;
+  background-image: url('../images/water_pa.gif');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgba(70, 130, 180, 0.6);
+}
+
+.panel-btn.eau:hover {
+  background-color: #5F9EA0;
+  box-shadow: 0 0 20px rgba(70, 130, 180, 0.8);
+}
+
+.panel-btn.terre {
+  background-color: #8B4513;
+  background-image: url('../images/terre2.gif');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgba(139, 69, 19, 0.5);
+}
+
+.panel-btn.terre:hover {
+  background-color: #A0522D;
+  box-shadow: 0 0 20px rgba(139, 69, 19, 0.8);
+}
+
+.panel-btn.vent {
+  background-color: #ADD8E6;
+  background-image: url('../images/vent.gif');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
+}
+
+.panel-btn.vent:hover {
+  background-color: #B0E0E6;
+  box-shadow: 0 0 15px rgba(173, 216, 230, 0.8);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-black);
+  text-align: center;
+  padding: 20px;
+  color: var(--color-white);
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Sections du contenu (Cuisine, Historique, Informatique, Scientifique) */
+/* Les styles communs sont regroupés ici */
+#cuisine,
+#historique,
+#informatique,
+#scientifique {
+  background-color: var(--color-dark-grey-2);
+  color: var(--color-white);
+  padding: 50px 20px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.recipe {
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
+#cuisine h2,
+#historique h2,
+#informatique h2,
+#scientifique h2 {
+  font-size: 2em;
+  color: var(--color-gold);
   margin-bottom: 20px;
-  border-radius: 10px;
-  background-color: #000000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.recipe img {
+/* Styles pour les conteneurs de contenu individuels (recettes, semaines, étapes, projets) */
+.recipe,
+.semaine,
+.etape,
+.projet {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 30px 40px;
+  border: 1px solid var(--color-border-grey);
+  border-radius: 10px;
+  background-color: var(--color-header-bg); /* Fond semi-transparent */
+  text-align: left; /* Par défaut, aligne le texte à gauche */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre le contenu interne verticalement */
+}
+
+/* Box shadow spécifiques */
+.recipe {
+  box-shadow: 0 4px 8px var(--color-shadow-blue);
+  color: var(--color-blue-cuisine-text); /* Couleur de texte spécifique */
+}
+
+.semaine,
+.etape,
+.projet {
+  box-shadow: 0 4px 8px var(--color-shadow-light);
+}
+
+.recipe img,
+.semaine img,
+.etape img,
+.projet img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  margin-top: 15px; /* Ajout d'une marge au-dessus des images */
+  max-height: 300px; /* Ajout de la hauteur max pour semaine img */
+  object-fit: cover; /* Pour que l'image remplisse l'espace sans se déformer */
 }
 
-.recipe h3 {
-  font-size: 1.5rem;
-  color: #333;
+/* Titres spécifiques aux contenus */
+.recipe h3,
+.semaine h3,
+.etape h3,
+.projet h3 {
+  text-align: center; /* Centre le titre de la recette/semaine/étape/projet */
+  font-size: 1.8em;
+  margin-top: 20px;
+  color: var(--color-gold); /* Or pour le h3 des recettes */
+}
+
+/* Exception pour h3 des autres sections (historique, info, scien.) */
+.semaine h3,
+.etape h3,
+.projet h3 {
+  color: var(--color-orange); /* Orange pour les h3 des autres sections */
+}
+
+/* Sous-titres (h4) */
+.recipe h4,
+.projet h4 {
+  font-size: 1.5em;
+  color: var(--color-orange); /* Orange pour les h4 des recettes et projets */
+  margin-top: 20px;
+}
+
+/* Listes */
+.ingredients,
+.steps,
+.semaine ul,
+.projet ul {
+  margin-top: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.ingredients ul,
+.steps ol,
+.semaine ul,
+.projet ul {
+  margin: 0 auto;
+  text-align: left;
+  display: inline-block; /* Pour centrer les listes non-complètement */
+  padding-left: 20px; /* Indentation pour les listes */
+}
+
+.ingredients li,
+.steps li,
+.semaine li,
+.projet li {
+  margin-bottom: 10px;
+}
+
+/* Paragraphes spécifiques */
+.etape p,
+.projet p {
+  font-size: 1.1em;
   margin-top: 10px;
 }
 
-.recipe .ingredients, .recipe .steps {
-  margin-top: 15px;
-  font-size: 1rem;
-  color: #555;
-}
-
-.recipe .ingredients li, .recipe .steps li {
-  margin-bottom: 5px;
-}
-
-.recipe .ingredients h4, .recipe .steps h4 {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-
-.semaine, .etape, .projet {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.semaine img, .etape img, .projet img {
-  width: 100%;
-  height: auto;
+/* Style de la photo dans la section informatique/scientifique */
+.photo {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 20px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px var(--color-shadow-light);
 }
 
-/* Historique Section */
-#historique h2 {
-  font-size: 2rem;
-}
-
-.semaine {
-  width: 100%;
-  margin: 0;
-}
-
-.recipe h3 {
-  font-size: 1.6rem;
-}
-
-.ingredients h4, .steps h4 {
-  font-size: 1.2rem;
-}
-
-.ingredients li, .steps li {
-  font-size: 1rem;
-  list-style-type: none;
-}
-
-/* Responsivité */
-@media screen and (max-width: 768px) {
-  header .navbar {
-    flex-direction: column;
-    align-items: center;
+/* Media Queries pour la responsivité */
+@media screen and (min-width: 768px) {
+  /* Header */
+  header {
+    padding: 20px 50px; /* Retour à l'original */
   }
 
-  header .navbar .links {
-    align-items: center;
+  .navbar {
+    flex-direction: row; /* Navbar en ligne sur desktop */
+    justify-content: space-between;
   }
 
-  header .navbar .links a {
-    font-size: 1rem;
-    padding: 10px;
+  .navbar nav ul {
+    margin-top: 0; /* Plus de marge supérieure quand la navbar est en ligne */
   }
 
-  .hero h2 {
-    font-size: 1.5rem;
+  /* Panel de boutons */
+  .panel-content {
+    grid-template-columns: 1fr 1fr; /* Deux colonnes sur les tablettes */
   }
 
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .recipe {
-    width: 90%;
-    padding: 15px;
-  }
-
-  .recipe h3 {
-    font-size: 1.4rem;
-  }
-
-  .ingredients h4, .steps h4 {
-    font-size: 1rem;
-  }
-
-  .ingredients li, .steps li {
-    font-size: 0.9rem;
+  /* Contenus des sections (recettes, etc.) */
+  .recipe,
+  .semaine,
+  .etape,
+  .projet {
+    padding: 30px 40px; /* Maintient le padding original */
+    width: 80%; /* Maintient la largeur originale */
   }
 }
+
+@media screen and (min-width: 1024px) {
+  /* Panel de boutons */
+  .panel-content {
+    grid-template-columns: repeat(4, 1fr); /* Quatre colonnes sur les grands écrans */
+  }
+}
+
+/* Suppression des styles redondants de la version précédente qui causaient des problèmes */
 .content-section {
-  display: none;
+  display: flex; /* Rétablit l'affichage par défaut */
+  flex-direction: column;
+  align-items: center;
+  padding:20px;
 }
 
-
-@media screen and (max-width: 480px) {
-  header .navbar .links a {
-    font-size: 1rem;
-    padding: 8px;
-  }
-
-  .hero h2 {
-    font-size: 1.2rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
+/* Rétabli la visibilité des listes */
+.ingredients ul, .steps ol {
+  display: inline-block;
 }
