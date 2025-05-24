@@ -9,8 +9,7 @@
   --color-header-bg: rgba(0, 0, 0, 0.6);
   --color-border-grey: #555;
   --color-shadow-light: rgba(255, 255, 255, 0.1);
-  --color-shadow-blue: rgba(255, 255, 255, 0.1);
-  --color-blue-cuisine-text: #2297a1; /* Couleur spécifique au texte de la section cuisine */
+  --color-shadow-blue: rgba(15, 13, 173, 0.1);
 }
 
 /* Réinitialisation des marges et padding */
@@ -31,7 +30,6 @@ body {
 /* Header - Barre de navigation */
 header {
   background-color: var(--color-header-bg);
-  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
@@ -83,7 +81,7 @@ header {
 
 /* Section Hero */
 .hero {
-  height: 100vh;
+  height: 45vh;
   background-image: url('carre-potager.jpg');
   background-size: cover;
   background-position: center;
@@ -294,7 +292,7 @@ footer p {
 /* Box shadow spécifiques */
 .recipe {
   box-shadow: 0 4px 8px var(--color-shadow-blue);
-  color: var(--color-blue-cuisine-text); /* Couleur de texte spécifique */
+  color: var(--color-white);
 }
 
 .semaine,
