@@ -1,543 +1,492 @@
-/* Variables CSS pour les couleurs */
-:root {
-  --color-white: #fff;
-  --color-black: #000;
-  --color-dark-grey-1: #302c2c;
-  --color-dark-grey-2: #2d2d2d;
-  --color-gold: #FFD700;
-  --color-orange: #FFA500;
-  --color-header-bg: rgba(0, 0, 0, 0.6);
-  --color-border-grey: #555;
-  --color-shadow-light: rgba(255, 255, 255, 0.1);
-  --color-shadow-blue: rgba(15, 13, 173, 0.1);
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carré Potager</title>
+  <link rel="stylesheet" href="./pages/css.css">
+  <link rel="icon" href="./images/Logo.png" type="image/png">
+  <style>
+  
+  #pdf-render {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    max-width: 100%;
+  }
+  
+  #controls {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #page-info {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  #fallback-message {
+    margin-top: 20px;
+    color: red;
+  }
+  
+  #download-link {
+    color: blue;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <img src="./images/logo-MJC-.png" alt="logo mjc" class="header-img">
+      <h1>Carré Potager</h1>
+    </div>
+  </header>
 
-/* Réinitialisation des marges et padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <!-- Section Hero avec image du potager -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Bienvenue dans notre Carré Potager</h2>
+      <p>Un projet alliant nature, technologie et savoir-faire culinaire</p>
+    </div>
+  </section>
 
-/* Définition du fond global */
-body {
-  font-family: 'Arial', sans-serif;
-  color: var(--color-white);
-  background: var(--color-dark-grey-1);
-  line-height: 1.6;
-}
+  <!-- Section Panel de Boutons -->
+  <section class="panel" id="panel-bt">
+    <div class="panel-content">
+      <a href="#historique" class="panel-btn terre">
+        Historique du Carré Potager
+      </a>
+      <a href="#informatique" class="panel-btn feu">
+        La Partie Informatique
+      </a>
+      <a href="#scientifique" class="panel-btn vent">
+        Les projets materiels
+      </a>
+      <a href="#cuisine" class="panel-btn eau">
+        La Cuisine du Carré Potager
+      </a>
+      <a href="#livre" class="panel-btn livre">
+        Carnet de bord
+      </a>
+    </div>
+  </section>
 
-/* Header - Barre de navigation */
-header {
-  background-color: var(--color-header-bg);
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 20px 50px;
-  z-index: 1000;
-}
+  <!-- Sections Dynamiques -->
+  <section id="historique" class="content-section" style="display:none;">
+      <h2>Journal de Bord</h2>
+      <div class="semaine">
+        <h3>Semaine 1</h3>
+        <ul>
+          <li>Préparation du terrain</li>
+          <li>Plantation des premières graines</li>
+          <li>Arrosage initial</li>
+        </ul>
+        <img src="images/potager10.jpg" alt="Photo semaine 1">
+      </div>
+      <div class="semaine">
+        <h3>Semaine 2</h3>
+        <ul>
+          <li>Installation des tuteurs</li>
+          <li>Ajout de compost</li>
+          <li>Observation de la germination</li>
+        </ul>
+        <img src="images/groupe2.jpg" alt="Photo semaine 2">
+      </div>
+      <div class="semaine">
+        <h3>Semaine 3</h3>
+        <ul>
+          <li>Commencement de la création des décors</li>
+          <li>Création des poteries</li>
+          <li>Arrosage et obseravtion de l'évolution</li>
+        </ul>
+        <img src="images/20250430_103530.jpg" alt="Photo semaine 3">
+      </div>
+      <div class="semaine">
+        <h3>Semaine 4</h3>
+        <ul>
+          <li>Installation de la bâche du côté Eau</li>
+          <li>Mise en place des plantes aquatiques</li>
+        </ul>
+        <img src="images/20250607_092906.jpg" alt="Photo semaine 4">
+      </div>
+      <div class="semaine">
+        <h3>Semaine 5</h3>
+        <ul>
+          <li>Ponçage des planches du carré potager</li>
+          <li>Entretien et arrosage</li>
+          <li>Completion du carnet de bord</li>
+        </ul>
+        <img src="images/received_996512586009764.jpeg" alt="Photo semaine 5">
+      </div>
+  </section>
 
-.navbar {
-  display: flex;
-  flex-direction: column; /* Par défaut pour mobile, s'ajuste en media query */
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
+  <section id="informatique" class="content-section" style="display:none;">
+      <h2>Conception du Site</h2>
+    
+      <div class="etape">
+        <h3>Étape 1 : Les Idées</h3>
+        <p>Lors de cette étape, nous avons discuté des fonctionnalités du site et de son design. Nous avons réfléchi à l'ergonomie et à l'expérience utilisateur, tout en imaginant comment rendre le site interactif et attrayant.</p>
+        <img src="images/1000025737.jpg" alt="Photo des enfants en train de réfléchir aux idées" class="photo">
+      </div>
+    
+      <div class="etape">
+        <h3>Étape 2 : Insertion du Thème et des Boutons GIF</h3>
+        <p>Nous avons ensuite choisi un thème sombre pour garder une continuité avec le design des autres sections. Pour rendre le site plus dynamique, nous avons intégré des boutons GIF animés. Ces boutons ajoutent une touche interactive au site.</p>
+        <img src="images/plan potager.gif" alt="Plan du potager" class="photo">
+      </div>
+    
+      <div class="etape">
+        <h3>Étape 3 : Répartition des Tâches</h3>
+        <p>Chacun de nous a pris en charge des tâches spécifiques : certains se sont concentrés sur la partie front-end (HTML/CSS), tandis que d'autres ont travaillé sur l'intégration des fonctionnalités JavaScript et l'optimisation du site pour les appareils mobiles.</p>
+        <img src="images/20250517_105915.jpg" alt="Photo des enfants en train de coder" class="photo">
+      </div>
+    
+      <div class="etape">
+        <h3>Étape 4 : Le Code</h3>
+        <p>Enfin, nous avons passé du temps à coder, tester, et améliorer le site pour qu'il soit fonctionnel et esthétique. Voici un aperçu du code utilisé pour créer le site.</p>
+        <img src="images/code_ex1.jpg" alt="Exemple de code" class="photo">
+      </div>
+  </section>
 
-.header-img {
-  width: 60px;
-  height: auto;
-  margin-right: 5px;
-  vertical-align: middle;
-}
+  <section id="scientifique" class="content-section" style="display:none;">
+      <h2>Projets Scientifiques</h2>
+    
+      <div class="projet">
+        <h3>Projet 1 : L'Éolienne</h3>
+        <p>Pour ce projet, nous avons conçu une éolienne fonctionnelle en utilisant des matériaux recyclés. L'objectif était de comprendre comment les éoliennes génèrent de l'énergie à partir du vent.</p>
+        <img src="images/potager3.jpg" alt="Photo de l'éolienne" class="photo">
+        <h4>Matériaux Utilisés</h4>
+        <ul>
+          <li>Bois recyclé pour la structure</li>
+          <li>Plastic pour les pales</li>
+          <li>Moteur électrique pour transformer l'énergie du vent</li>
+        </ul>
+        <h4>Comment cela a été réalisé</h4>
+        <p>Nous avons d'abord conçu un modèle de l'éolienne, puis avons découpé et assemblé les pièces en utilisant les matériaux choisis. Le moteur a été relié aux pales pour générer de l'électricité à chaque rotation.</p>
+      </div>
+    
+      <div class="projet">
+        <h3>Projet 2 : Le Pont</h3>
+        <p>Dans ce projet, nous avons conçu un pont miniature pour tester la résistance des matériaux et la capacité à supporter des charges. L'objectif était de créer un pont solide et stable.</p>
+        <img src="images/20250607_093741.jpg" alt="Photo du pont" class="photo">
+        <h4>Matériaux Utilisés</h4>
+        <ul>
+          <li>Planche de bois</li>
+          <li>Vis pour l'assemblage</li>
+          <li>Carrés en bois récupéré</li>
+        </ul>
+        <h4>Comment cela a été réalisé</h4>
+        <p>Après avoir dessiné les plans du pont, nous avons découpé la planche pour la base et nous avons installés dessus les carrés en bois que nous avons récupéré. Ensuite, nous les avons les avons vissés pour consolider le tout.</p>
+      </div>
+      
+      <div class="projet">
+        <h3>Projet 3 : Le Chevalet</h3>
+        <p>Nous avons monté ce chevalet coté terre pour rajouter une décoration en rapport avec notre région, c'est une représentation du chevalet "Le Vieux 2" de Marles-les-Mines</p>
+        <img src="images/20250506_092355.jpg" alt="Photo du chevalet" class="photo">
+        <h4>Matériaux Utilisés</h4>
+        <ul>
+          <li>Bois pour la structure</li>
+          <li>Colle pour faire tenir certaines pièces</li>
+          <li>Emboitement des pièces pour la majeur partie de la construction</li>
+          <li>Verni colle pour eviter la déterioration du chevalet</li>
+        </ul>
+        <h4>Comment cela a été réalisé</h4>
+        <p>Nous avons suivi les instrutions du kit prédécoupé, nous avons fait l'assemblage en collant chaques parties avec de la colle à bois. Une fois fini, nous avons verni le tout.</p>
+      </div>
+      
+      <div class="projet">
+        <h3>Projet 4 : Les poteries</h3>
+        <p>Les enfants ont voulu faire de la poterie afin de representer les éléments introduits dans le carré potager</p>
+        <img src="images/20250607_094032.jpg" alt="Photo d'une poterie" class="photo">
+        <h4>Matériaux Utilisés</h4>
+        <ul>
+          <li>Pâte à modeler durcissante à l'air, effet pierre</li>
+          <li>Peinture pour poterie</li>
+          <li>Vernis</li>
+        </ul>
+        <h4>Comment cela a été réalisé</h4>
+        <p>Nous avons modelé la forme d'une goutte d'eau, d'une flamme, d'un nuage, d'une feuille et d'un totem représentant les 4 en même temps, puis nous les avons peints dans leurs couleurs respectives avant de les vernir pour les proteger des intempéries</p>
+      </div>
+      <div class="projet">
+        <h3>Projet 5 : Le Volcan</h3>
+        <p>Afin de représenter le feu, nous avons choisis la structure qui le représente le plus : le Volcan</p>
+        <img src="images/20250607_100128.jpg" alt="Photo du Volcan Majestique" class="photo">
+        <h4>Matériaux Utilisés</h4>
+        <ul>
+          <li>Plastique pour imprimante 3D PLA</li>
+          <li>Peinture</li>
+          <li>Vernis</li>
+        </ul>
+        <h4>Comment cela a été réalisé</h4>
+        <p>Christophe, l'animateur des samedis scientifiques, à créé le fichier de conception du volcan, les enfants l'ont ensuite réalisé avec l'imprimante 3D</p>
+      </div>
+      <div class="projet">
+        <h3>Projet 6 : La Péniche</h3>
+        <p>Element important dans l'histoire du Nord et du transport de marchandises, nous avons décidé de le symboliser dans ce carré</p>
+        <img src="images/20250607_103108.jpg" alt="Photo de la péniche" class="photo">
+        <h4>Matériaux Utilisés</h4>
+        <ul>
+          <li>Bois</li>
+          <li>Peinture</li>
+          <li>Colle forte</li>
+          <li>Griallage en plastique</li>
+        </ul>
+        <h4>Comment cela a été réalisé</h4>
+        <p>Louis, enfant des samedis scientifiques, s'est lancé dans la conception de cette péniche en assemblant des morceaux de bois avec de la colle forte et y a ajouté du grillage en plastique pour représenter les bords de la péniche</p>
+      </div>
+    
+  </section>
+<!--recettes ici-->
+  <section id="cuisine" class="content-section recipe-container" style="display:none;">
+    <div class="recipe">
+      <h3>Soupe de Légumes du Potager</h3>
+      <img src="images/SoupeLegumesConfit19.jpeg" alt="Photo Soupe de Légumes" style="display: block; margin: auto; width: 30%;">
+      <div class="ingredients">
+        <h4>Ingrédients :</h4>
+        <ul>
+          <li>Carottes</li>
+          <li>Pommes de terre</li>
+          <li>Poireaux</li>
+          <li>Oignon</li>
+          <li>Herbes fraîches (persil, thym)</li>
+          <li>Sel et poivre</li>
+        </ul>
+      </div>
+      <div class="steps">
+        <h4>Recette :</h4>
+        <ol>
+          <li>Pelez et coupez tous les légumes en morceaux.</li>
+          <li>Faites cuire les légumes dans une grande casserole d'eau pendant environ 30 minutes.</li>
+          <li>Ajoutez les herbes, le sel et le poivre. Laissez mijoter 10 minutes supplémentaires.</li>
+          <li>Mixez le tout pour obtenir une soupe lisse et onctueuse.</li>
+          <li>Sers chaud, accompagné de pain frais.</li>
+        </ol>
+      </div>
+    </div>
 
-.navbar h1 {
-  color: var(--color-white);
-  font-size: 2rem;
-  display: inline-block;
-  vertical-align: middle;
-}
+    <div class="recipe">
+      <h3>Gauffre de pommes de terre bleue d'Artois ou Vitelotte</h3>
+      <img src="images/gaufre-salée-sans-gluten-pomme-de-terre.webp" alt="Photo gauffre de pommes de terre" style="display: block; margin: auto; width: 30%;">
+      <div class="ingredients">
+        <h4>Ingrédients :</h4>
+        <ul>
+          <li>200g de Pommes de terre bleue d'Artois ou Vitelotte Prince de Bretagne</li>
+          <li>100g de farine</li>
+          <li>50cl de lait</li>
+          <li>2 œuf (1 entier et 1 blanc d'œuf)</li>
+          <li>50g de beurre</li>
+          <li>1 sachet de levure</li>
+          <li>herbes de provence</li>
+          <li>sel et poivre</li>
+        </ul>
+      </div>
+      <div class="steps">
+        <h4>Recette :</h4>
+        <ol>
+          <li>Lavez, épluchez et râpez les pommes de terre. Retirez l'eau des pommes de terre en les pressant dans un tamis ou une passoire.</li>
+          <li>Dans un saladier, mélangez ensemble la farine, la levure et les pommes de terre râpées.</li>
+          <li>Ajoutez l'œuf entier et le blanc d'œuf, mélangez. Versez le lait petit à petit, tout en mélangeant la préparation. Enfin, faites fondre le beurre et ajoutez-le au mélange.</li>
+          <li>Assaisonnez avec du sel, un peu de poivre et des herbes de Provence.</li>
+          <li>Faites reposer la pâte au réfrigérateur 20 mn. Allumez le gaufrier et laissez le chauffer.</li>
+          <li>Verser la pâte dans le gaufrier et laissez cuire. Servez les gaufres à l'apéro avec une crème au fromage frais et ciboulette ou en entré e avec une petite salade.</LI>
+        </ol>
+      </div>
+      </div>
+      <div class="recipe">
+        <h3>Gateau au pavot</h3>
+        <img src="images/cuisine4.jpg" alt="Photo gateau pavot" style="display: block; margin: auto; width: 30%;">
+        <div class="ingredients">
+          <h4>Ingrédients :</h4>
+          <ul>
+            <li>150g de sucre</li>
+            <li>150g de farine</li>
+            <li>3 œuf</li>
+            <li>100g de beurre</li>
+            <li>½ sachet de levure</li>
+            <li>zeste de citron</li>
+            <li>2 cuillères à soupe de pavot (si possible bio)</li>
+          </ul>
+        </div>
+    <div class="steps">
+      <h4>Recette :</h4>
+      <ol>
+        <li>Mélanger le tout (l'ordre n'a pas d'importance) et verser dans un moule à cake beurré.</li>
+        <li>Mettre au four préchauffé, pendant environ 40 mn à Th 6 ou 7.</li>  
+      </ol>
+    </div>
+  </div>
+  <div class="recipe">
+    <h3>Gateau à la bettrave</h3>
+    <img src="images/1020cb8a3ca13ee79085cc530b145e40.jpg" alt="Photo gateau à la bettrave" style="display: block; margin: auto; width: 30%;">
+    <div class="ingredients">
+      <h4>Ingrédients :</h4>
+      <ul>
+        <li>150g de sucre</li>
+        <li>50g de farine</li>
+        <li>3 œuf</li>
+        <li>130g de beurre</li>
+        <li>1 cuillère à café de levure</li>
+        <li>1 cuillère à café d'extrait de vanille</li>
+        <li>250g de bettraves</li>
+        <li>200g de chocolat noir</li>
+        <li>50g d'amandes en poudre</li>
+        <li>40g de cacao en poudre</li>
+        <li>cerneau de noix (facultaitif)</li>
+      </ul>
+    </div>
+    <div class="steps">
+      <h4>Recette :</h4>
+      <ol>
+        <li>Préchauffer le four à 180°C</li>
+        <li>Sortir les 130 g de beurre du réfrigérateur et le laisser à température ambiante.</li>  
+        <li>Mixer finement les betteraves cuites pour obtenir une purée.</li>
+        <li>Faire fondre le chocolat au bain-marie.</li>
+        <li>Mélanger le beurre avec les œufs et le chocolat de façon homogène.</li>
+        <li>Ajouter le sucre, la farine, la vanille, les amandes, les cerneaux de noix et mélanger.</li>
+        <li>Incorporer la purée de betteraves, le cacao et la levure, mélanger et bien et verser la pâte à gâteau dans un moule préalablement beurré. </li>
+        <li>Enfourner pour 30 à 35 minutes de cuisson en vérifiant régulièrement avec la pointe d'un couteau.</li>
+        <li>Une fois le gâteau cuit, le laisser refroidir avant de le démouler puis déguster. </li>
+      </ol>
+    </div>
+  </div>
 
-.navbar nav ul {
-  list-style: none;
-  display: flex;
-  margin-top: 10px; /* Espacement pour mobile */
-}
+    <!-- Vous pouvez ajouter plus de recettes de la même manière -->
+  </section>
+    <section id="livre" class="content-section recipe-container" style="display:none;">
+    
+      <h1>Carnet de Bord</h1>
+  
+  <!-- Zone pour afficher le PDF -->
+  <canvas id="pdf-render"></canvas>
 
-.navbar nav ul li {
-  margin-left: 20px;
-}
+  <div id="controls">
+    <button id="prev-page">⬅️ Page précédente</button>
+    <button id="next-page">➡️ Page suivante</button>
+  </div>
 
-.navbar nav ul li a {
-  color: var(--color-white);
-  text-decoration: none;
-  font-size: 1.2rem;
-}
+  <!-- Message de fallback -->
+  <div id="fallback-message" style="display:none;">
+    <p>Votre navigateur ne supporte pas l'affichage des PDF ou JavaScript est désactivé.</p>
+    <p><a id="download-link" href="votre-document.pdf" download>Télécharger le PDF ici</a></p>
+  </div>
 
-.navbar nav ul li a:hover {
-  color: var(--color-gold);
-}
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
-/* Section Hero */
-.hero {
-  height: 40vh;
-  background-image: url('carre-potager.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--color-white);
-  position: relative;
-  z-index: 0;
-}
+  </section>
 
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sections = document.querySelectorAll('.content-section');
+  const links = document.querySelectorAll('a[href^="#"]');
 
-.hero-content {
-  max-width: 600px;
-  padding: 20px;
-  background-color: var(--color-header-bg);
-  border-radius: 10px;
-}
-
-.hero h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.btn {
-  padding: 10px 20px;
-  background-color: var(--color-gold);
-  color: var(--color-black);
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  display: inline-block;
-  margin: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: var(--color-orange);
-}
-
-/* Panel des boutons */
-.panel {
-  padding: 50px 20px;
-  background-color: var(--color-dark-grey-2);
-  text-align: center;
-}
-
-.panel-content {
-  display: grid;
-  grid-template-columns: 1fr; /* Par défaut une colonne pour mobile */
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.panel-btn {
-  padding: 30px;
-  color: var(--color-white);
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 1.4rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  transition: transform 0.3s ease;
-  text-align: center;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-
-.panel-btn span { /* Le texte doit être au-dessus de l'overlay */
-    position: relative;
-    z-index: 2;
-}
-
-.panel-btn:hover {
-  transform: translateY(-5px);
-}
-
-/* Styles spécifiques aux boutons du panel */
-.panel-btn.feu {
-  background-color: #FF4500;
-  background-image: url('../images/feu.gif');
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
-}
-
-.panel-btn.feu:hover {
-  background-color: #FF6347;
-  box-shadow: 0 0 25px rgba(255, 69, 0, 0.8);
-}
-
-.panel-btn.eau {
-  background-color: #4682B4;
-  background-image: url('../images/water_pa.gif');
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 15px rgba(70, 130, 180, 0.6);
-}
-
-.panel-btn.eau:hover {
-  background-color: #5F9EA0;
-  box-shadow: 0 0 20px rgba(70, 130, 180, 0.8);
-}
-
-.panel-btn.terre {
-  background-color: #8B4513;
-  background-image: url('../images/terre2.gif');
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 15px rgba(139, 69, 19, 0.5);
-}
-
-.panel-btn.terre:hover {
-  background-color: #A0522D;
-  box-shadow: 0 0 20px rgba(139, 69, 19, 0.8);
-}
-
-.panel-btn.vent {
-  background-color: #ADD8E6;
-  background-image: url('../images/vent.gif');
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
-}
-
-.panel-btn.vent:hover {
-  background-color: #B0E0E6;
-  box-shadow: 0 0 15px rgba(173, 216, 230, 0.8);
-}
-
-/* Footer */
-footer {
-  background-color: var(--color-black);
-  text-align: center;
-  padding: 20px;
-  color: var(--color-white);
-}
-
-footer p {
-  font-size: 1rem;
-}
-
-/* Sections du contenu (Cuisine, Historique, Informatique, Scientifique) */
-/* Les styles communs sont regroupés ici */
-#cuisine,
-#historique,
-#informatique,
-#scientifique {
-  background-color: var(--color-dark-grey-2);
-  color: var(--color-white);
-  padding: 50px 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#cuisine h2,
-#historique h2,
-#informatique h2,
-#scientifique h2 {
-  font-size: 2em;
-  color: var(--color-gold);
-  margin-bottom: 20px;
-}
-
-/* Styles pour les conteneurs de contenu individuels (recettes, semaines, étapes, projets) */
-.recipe,
-.semaine,
-.etape,
-.projet {
-  width: 80%;
-  max-width: 900px;
-  margin: 0 auto 40px auto;
-  padding: 30px 40px;
-  border: 1px solid var(--color-border-grey);
-  border-radius: 10px;
-  background-color: var(--color-header-bg); /* Fond semi-transparent */
-  text-align: left; /* Par défaut, aligne le texte à gauche */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centre le contenu interne verticalement */
-}
-
-/* Box shadow spécifiques */
-.recipe {
-  box-shadow: 0 4px 8px var(--color-shadow-blue);
-  color: var(--color-white);
-}
-
-.semaine,
-.etape,
-.projet {
-  box-shadow: 0 4px 8px var(--color-shadow-light);
-}
-
-.recipe img,
-.semaine img,
-.etape img,
-.projet img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 15px; /* Ajout d'une marge au-dessus des images */
-  max-height: 300px; /* Ajout de la hauteur max pour semaine img */
-  object-fit: cover; /* Pour que l'image remplisse l'espace sans se déformer */
-}
-
-/* Titres spécifiques aux contenus */
-.recipe h3,
-.semaine h3,
-.etape h3,
-.projet h3 {
-  text-align: center; /* Centre le titre de la recette/semaine/étape/projet */
-  font-size: 1.8em;
-  margin-top: 20px;
-  color: var(--color-gold); /* Or pour le h3 des recettes */
-}
-
-/* Exception pour h3 des autres sections (historique, info, scien.) */
-.semaine h3,
-.etape h3,
-.projet h3 {
-  color: var(--color-orange); /* Orange pour les h3 des autres sections */
-}
-
-/* Sous-titres (h4) */
-.recipe h4,
-.projet h4 {
-  font-size: 1.5em;
-  color: var(--color-orange); /* Orange pour les h4 des recettes et projets */
-  margin-top: 20px;
-}
-
-/* Listes */
-.ingredients,
-.steps,
-.semaine ul,
-.projet ul {
-  margin-top: 20px;
-  text-align: left;
-  width: 100%;
-}
-
-.ingredients ul,
-.steps ol,
-.semaine ul,
-.projet ul {
-  margin: 0 auto;
-  text-align: left;
-  display: inline-block; /* Pour centrer les listes non-complètement */
-  padding-left: 20px; /* Indentation pour les listes */
-}
-
-.ingredients li,
-.steps li,
-.semaine li,
-.projet li {
-  margin-bottom: 10px;
-}
-
-/* Paragraphes spécifiques */
-.etape p,
-.projet p {
-  font-size: 1.1em;
-  margin-top: 10px;
-}
-
-/* Style de la photo dans la section informatique/scientifique */
-.photo {
-  width: 80%;
-  max-width: 800px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px var(--color-shadow-light);
-}
-
-/* --- Media Queries pour la responsivité --- */
-
-/* Pour les écrans jusqu'à 767px de large (smartphones et petits tablettes) */
-@media screen and (max-width: 767px) {
-  /* Ajustements généraux pour le padding des sections sur mobile */
-  #cuisine,
-  #historique,
-  #informatique,
-  #scientifique {
-    padding: 30px 15px; /* Réduit le padding horizontal pour mieux utiliser l'espace */
+  // Fonction pour afficher une section et cacher les autres
+  function showSectionById(id) {
+    sections.forEach(section => {
+      section.style.display = 'none';
+    });
+    const target = document.getElementById(id);
+    if (target) {
+      target.style.display = 'block';
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
-  /* Ajustements pour les cartes (recettes, semaines, étapes, projets) */
-  .recipe,
-  .semaine,
-  .etape,
-  .projet {
-    width: 95%; /* Prend presque toute la largeur, laissant une petite marge */
-    padding: 20px 15px; /* Réduit le padding interne pour éviter les bordures trop épaisses */
-    margin-left: auto; /* Centre l'élément */
-    margin-right: auto; /* Centre l'élément */
-  }
+  // Attacher l'événement à tous les liens internes
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href').substring(1);
+      if (document.getElementById(targetId)) {
+        e.preventDefault();
+        showSectionById(targetId);
+      }
+    });
+  });
 
-  /* Ajustement pour le header sur mobile */
-  header {
-    padding: 15px 20px; /* Réduit le padding du header sur mobile */
-  }
-
-  .navbar h1 {
-    font-size: 1.8rem; /* Taille de police légèrement réduite pour le titre du header */
-  }
-
-  .navbar nav ul {
-    flex-wrap: wrap; /* Permet aux liens de passer à la ligne si nécessaire */
-    justify-content: center; /* Centre les liens de navigation */
-  }
-
-  .navbar nav ul li {
-    margin: 5px 10px; /* Réduit la marge entre les liens */
-  }
-
-  .navbar nav ul li a {
-    font-size: 1rem; /* Taille de police réduite pour les liens de navigation */
-  }
-
-  /* Ajustement pour le contenu Hero sur mobile */
-  .hero h2 {
-    font-size: 2.2rem; /* Taille de police réduite pour le titre du hero */
-  }
-
-  .hero p {
-    font-size: 1rem; /* Taille de police réduite pour le paragraphe du hero */
-  }
-
-  .hero-content {
-    padding: 15px; /* Réduit le padding du contenu hero */
-  }
-
-  /* Ajustements pour les boutons du panel sur mobile */
-  .panel-btn {
-    font-size: 1.2rem; /* Taille de police réduite pour les boutons */
-    padding: 20px; /* Réduit le padding des boutons */
-  }
-
-  .panel-content {
-    grid-template-columns: 1fr; /* S'assure qu'il n'y a qu'une colonne sur mobile */
-  }
-
-  /* Ajustements pour les titres h2 des sections */
-  #cuisine h2,
-  #historique h2,
-  #informatique h2,
-  #scientifique h2 {
-    font-size: 1.8em; /* Réduit la taille du titre de section */
-  }
-
-  /* Ajustements pour les titres h3 et h4 à l'intérieur des cartes */
-  .recipe h3,
-  .semaine h3,
-  .etape h3,
-  .projet h3 {
-    font-size: 1.5em; /* Réduit la taille des titres de cartes */
-  }
-
-  .recipe h4,
-  .projet h4 {
-    font-size: 1.3em; /* Réduit la taille des sous-titres de cartes */
-  }
-
-  /* Ajustements pour les listes */
-  .ingredients ul,
-  .steps ol,
-  .semaine ul,
-  .projet ul {
-    padding-left: 15px; /* Réduit l'indentation des listes */
-  }
-
-  .ingredients li,
-  .steps li,
-  .semaine li,
-  .projet li {
-    font-size: 0.95em; /* Réduit légèrement la taille du texte des listes */
-  }
-
-  /* Ajustement pour la photo dans les sections Informatique/Scientifique */
-  .photo {
-    width: 95%; /* Prend presque toute la largeur */
-  }
-}
-
-/* Pour les écrans de 768px et plus (tablettes et desktops) */
-@media screen and (min-width: 768px) {
-  /* Header */
-  header {
-    padding: 20px 50px; /* Retour à l'original */
-  }
-
-  .navbar {
-    flex-direction: row; /* Navbar en ligne sur desktop */
-    justify-content: space-between;
-  }
-
-  .navbar nav ul {
-    margin-top: 0; /* Plus de marge supérieure quand la navbar est en ligne */
-  }
-
-  /* Panel de boutons */
-  .panel-content {
-    grid-template-columns: 1fr 1fr; /* Deux colonnes sur les tablettes */
-  }
-
-  /* Contenus des sections (recettes, etc.) */
-  .recipe,
-  .semaine,
-  .etape,
-  .projet {
-    padding: 30px 40px; /* Maintient le padding original */
-    width: 80%; /* Maintient la largeur originale */
-  }
-}
-
-/* Pour les écrans de 1024px et plus (grands desktops) */
-@media screen and (min-width: 1024px) {
-  /* Panel de boutons */
-  .panel-content {
-    grid-template-columns: repeat(4, 1fr); /* Quatre colonnes sur les grands écrans */
-  }
-}
-
-/* Suppression des styles redondants de la version précédente qui causaient des problèmes */
-.content-section {
-  display: flex; /* Rétablit l'affichage par défaut */
-  flex-direction: column;
-  align-items: center;
-  padding:20px;
-}
-
-/* Rétabli la visibilité des listes */
-.ingredients ul, .steps ol {
-  display: inline-block;
-}
+  // ❌ Aucun affichage par défaut ici
+});
+</script>
+  <script>
+    const url = 'images/'; // 🔁 Remplace par le nom de ton fichier PDF
+    
+    // Vérification de la compatibilité PDF.js
+    if (typeof pdfjsLib === 'undefined' || !pdfjsLib.getDocument) {
+      document.getElementById('fallback-message').style.display = 'block';
+    } else {
+      let pdfDoc = null,
+        pageNum = 1,
+        pageIsRendering = false,
+        pageNumIsPending = null;
+      
+      const scale = 1.5,
+        canvas = document.getElementById('pdf-render'),
+        ctx = canvas.getContext('2d');
+      
+      // Rendu d’une page
+      const renderPage = num => {
+        pageIsRendering = true;
+        
+        pdfDoc.getPage(num).then(page => {
+          const viewport = page.getViewport({ scale });
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+          
+          const renderCtx = {
+            canvasContext: ctx,
+            viewport
+          };
+          
+          page.render(renderCtx).promise.then(() => {
+            pageIsRendering = false;
+            if (pageNumIsPending !== null) {
+              renderPage(pageNumIsPending);
+              pageNumIsPending = null;
+            }
+          });
+          
+          document.getElementById('page-info').textContent = `Page ${num} / ${pdfDoc.numPages}`;
+        });
+      };
+      
+      const queueRenderPage = num => {
+        if (pageIsRendering) {
+          pageNumIsPending = num;
+        } else {
+          renderPage(num);
+        }
+      };
+      
+      const showPrevPage = () => {
+        if (pageNum <= 1) return;
+        pageNum--;
+        queueRenderPage(pageNum);
+      };
+      
+      const showNextPage = () => {
+        if (pageNum >= pdfDoc.numPages) return;
+        pageNum++;
+        queueRenderPage(pageNum);
+      };
+      
+      // Chargement du PDF
+      pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
+        pdfDoc = pdfDoc_;
+        renderPage(pageNum);
+      });
+      
+      // Événements
+      document.getElementById('prev-page').addEventListener('click', showPrevPage);
+      document.getElementById('next-page').addEventListener('click', showNextPage);
+    }
+  </script>
+</body>
+</html>
